@@ -1,0 +1,10 @@
+.body {
+  background-color: var(--background-blueblack);
+  min-height: 100vh;
+  color: #fff;
+}
+
+.container {
+  width: 85%;
+  margin: 0 auto;
+}
