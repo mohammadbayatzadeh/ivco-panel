@@ -1,13 +1,13 @@
 .container {
   padding: 30px;
   border-radius: 10px;
-  background-color: rgba(70, 73, 87, 0.5 );
+  background-color: rgba(70, 73, 87, 0.3 );
   font-size: 1em;
   width: 180px;
   text-align: center;
   transition: all 0.5s ease;
   transform: translateY(0px);
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(4px);
   cursor: pointer;
   position: absolute;
 }

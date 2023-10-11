@@ -2,7 +2,8 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
-  min-height: 50vh;
+  min-height: 70vh;
+  margin-bottom: 80px;
 }
 .intro {
   margin: auto 0;
