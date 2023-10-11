@@ -3,6 +3,7 @@ import styles from "./LandingPage.module.css";
 import DashboardNav from "../layouts/DashboardNav";
 import LandingBanner from "../modules/LandingBanner";
 import Pelans from "../modules/Pelans";
+import Features from "../modules/Features";
 
 function LandingPage() {
   return (
@@ -11,6 +12,7 @@ function LandingPage() {
         <DashboardNav />
         <LandingBanner />
         <Pelans />
+        <Features />
       </div>
     </div>
   );
