@@ -6,6 +6,7 @@ import Pelans from "../modules/Pelans";
 import Features from "../modules/Features";
 import FAQs from "../modules/FAQs";
 import ContactUs from "../modules/ContactUs";
+import AboutUs from "../modules/AboutUs";
 
 function LandingPage() {
   return (
@@ -17,6 +18,7 @@ function LandingPage() {
         <Features />
         <FAQs />
         <ContactUs />
+        <AboutUs />
       </div>
     </div>
   );
