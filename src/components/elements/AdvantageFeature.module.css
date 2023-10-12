@@ -27,15 +27,31 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: center;
 }
 .content h4 {
   font-size: 2.2em;
 }
-
+.options {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 10px 0;
+}
+.option {
+  display: flex;
+  width: 100%;
+  font-size: 0.9em;
+  align-items: center;
+}
+.option img {
+  width: 50px;
+  height: 50px;
+  margin-right: 5px;
+}
 @media (max-width: 1000px) {
   .container {
-    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
   }
   .features {
     width: 100%;

@@ -21,6 +21,12 @@
 .features:hover .playImage:first-child {
   top: -20px;
 }
+.playImage:nth-child(2) {
+  left: 0;
+}
+.features:hover .playImage:nth-child(2) {
+  left: 20px;
+}
 .content {
   width: 50%;
   padding: 0 15px;
