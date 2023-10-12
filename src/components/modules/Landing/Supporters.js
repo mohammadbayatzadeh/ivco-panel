@@ -1,6 +1,8 @@
 import React from "react";
-import styles from "./Supporters.module.css";
 import Image from "next/image";
+
+//styles
+import styles from "./Supporters.module.css";
 
 function Supporters() {
   return (

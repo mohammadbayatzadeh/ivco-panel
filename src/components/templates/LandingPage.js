@@ -1,15 +1,21 @@
 import React from "react";
+
+//styles
 import styles from "./LandingPage.module.css";
+
+//nav
 import DashboardNav from "../layouts/DashboardNav";
-import LandingBanner from "../modules/LandingBanner";
-import Pelans from "../modules/Pelans";
-import Features from "../modules/Features";
-import FAQs from "../modules/FAQs";
-import ContactUs from "../modules/ContactUs";
-import AboutUs from "../modules/AboutUs";
-import Supporters from "../modules/Supporters";
-import Privacy from "../modules/Privacy";
-import Footer from "../modules/Footer";
+
+//components
+import LandingBanner from "../modules/Landing/LandingBanner";
+import Pelans from "../modules/Landing/Pelans";
+import Features from "../modules/Landing/Features";
+import FAQs from "../modules/Landing/FAQs";
+import ContactUs from "../modules/Landing/ContactUs";
+import AboutUs from "../modules/Landing/AboutUs";
+import Supporters from "../modules/Landing/Supporters";
+import Privacy from "../modules/Landing/Privacy";
+import Footer from "../modules/Landing/Footer";
 
 function LandingPage() {
   return (

@@ -1,6 +1,10 @@
 import React from "react";
+
+//styles
 import styles from "./Pelans.module.css";
-import Pelan from "../elements/Pelan";
+
+//components
+import Pelan from "../../elements/Landing/items/Pelan";
 
 function Pelans() {
   return (

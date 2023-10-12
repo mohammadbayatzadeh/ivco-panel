@@ -1,10 +1,12 @@
 import React from "react";
+
+//styles
 import styles from "./Aboutus.module.css";
 
-function AboutUs() {
+function Privacy() {
   return (
     <div className={styles.container}>
-      <h4> About us</h4>
+      <h4>Privacy Policy</h4>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
         mollitia, molestiae quas vel sint commodi repudiandae consequuntur
@@ -55,4 +57,4 @@ function AboutUs() {
   );
 }
 
-export default AboutUs;
+export default Privacy;

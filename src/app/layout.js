@@ -1,5 +1,7 @@
+//styles
 import "./globals.css";
 
+//fonts
 import { Irancell } from "@/utils/Fonts";
 
 export const metadata = {

@@ -1,6 +1,8 @@
 import React from "react";
-import styles from "./Pelan.module.css";
 import Image from "next/image";
+
+//styles
+import styles from "./Pelan.module.css";
 
 function Pelan({ title, tether, binary, referral, weekly, iw, daily, image }) {
   return (

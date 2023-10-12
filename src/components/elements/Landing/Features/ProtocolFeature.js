@@ -1,6 +1,8 @@
 import React from "react";
-import styles from "./ProtocolFeature.module.css";
 import Image from "next/image";
+
+//styles
+import styles from "./ProtocolFeature.module.css";
 
 function ProtocolFeature() {
   return (

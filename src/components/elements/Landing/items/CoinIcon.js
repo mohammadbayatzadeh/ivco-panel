@@ -1,8 +1,10 @@
 import React from "react";
-import styles from "./CoinIcon.module.css";
 import Image from "next/image";
 
-function CoinIcon({ title, x = 20, y = 40 , image }) {
+//styles
+import styles from "./CoinIcon.module.css";
+
+function CoinIcon({ title, x = 20, y = 40, image }) {
   return (
     <div className={styles.container} style={{ top: y, right: x }}>
       <span>{title}</span>

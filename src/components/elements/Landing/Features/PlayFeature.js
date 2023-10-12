@@ -1,27 +1,29 @@
 import React from "react";
-import styles from "./AdvantageFeature.module.css";
 import Image from "next/image";
 
-function AdvantageFeature() {
+//styles
+import styles from "./playFeature.module.css";
+
+function PlayFeature() {
   return (
     <div className={styles.container}>
       <div className={styles.features}>
         <Image
-          src="/images/Graphic-Layer-Top-p-1080.png"
+          src="/images/Graphic-Decentralized-Box-p-1080.png"
           width={700}
           height={700}
           alt="feature"
           className={styles.playImage}
         />
         <Image
-          src="/images/Graphic-Layer-Coins-p-800.png"
+          src="/images/Graphic-Decentralized-Orbitals-p-1080.png"
           width={700}
           height={700}
           alt="feature"
           className={styles.playImage}
         />
         <Image
-          src="/images/Graphic-Layer-Bottom-p-800.png"
+          src="/images/Graphic-Decentralized-Base-p-1080.png"
           width={700}
           height={700}
           alt="feature"
@@ -29,9 +31,14 @@ function AdvantageFeature() {
       </div>
       <div className={styles.content}>
         <h4>
-          Take full advantage of all that iwco has to offer today and in the
-          future
+          Play with pleasure and earn money. Our wish is your championship
         </h4>
+        <p>
+          After registration, you can earn money from the game platform and
+          introduce it to others. You can receive 70% of the amount of the loser
+          in the game rooms. You will receive 1% of the total amount from each
+          game played in your 25 levels
+        </p>
         <div className={styles.options}>
           <div className={styles.option}>
             <Image
@@ -75,4 +82,4 @@ function AdvantageFeature() {
   );
 }
 
-export default AdvantageFeature;
+export default PlayFeature;

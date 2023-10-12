@@ -1,8 +1,12 @@
 import React from "react";
-import styles from "./LandingBanner.module.css";
 import Image from "next/image";
 import Link from "next/link";
-import CoinIcon from "../elements/CoinIcon";
+
+//styles
+import styles from "./LandingBanner.module.css";
+
+//components
+import CoinIcon from "../../elements/Landing/items/CoinIcon";
 
 function LandingBanner() {
   return (
@@ -12,7 +16,7 @@ function LandingBanner() {
         <p>International winners company</p>
         <div className={styles.buttons}>
           <Link href="/login">LOGIN</Link>
-          <Link href="/login">SIGNUP</Link>
+          <Link href="/signup">SIGNUP</Link>
         </div>
       </div>
 
@@ -29,9 +33,24 @@ function LandingBanner() {
         className={styles.teal}
       />
       <div className={styles.icons}>
-        <CoinIcon title="Trust Wallet" image='/images/tether.svg' x='20%' y={100} />
-        <CoinIcon title="Tether TRC20" image='/images/TWT.svg' x='30%' y={300} />
-        <CoinIcon title="Urneal Engine" image='/images/icons8-unreal-engine.svg' x='20%' y={450} />
+        <CoinIcon
+          title="Trust Wallet"
+          image="/images/tether.svg"
+          x="20%"
+          y={100}
+        />
+        <CoinIcon
+          title="Tether TRC20"
+          image="/images/TWT.svg"
+          x="30%"
+          y={300}
+        />
+        <CoinIcon
+          title="Urneal Engine"
+          image="/images/icons8-unreal-engine.svg"
+          x="20%"
+          y={450}
+        />
       </div>
     </section>
   );

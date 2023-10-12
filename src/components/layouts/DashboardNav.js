@@ -1,4 +1,6 @@
 import React from "react";
+
+//styles
 import styles from "./DashboardNav.module.css";
 
 function DashboardNav() {

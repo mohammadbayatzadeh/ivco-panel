@@ -1,6 +1,8 @@
 import React from "react";
-import styles from "./OwnFeature.module.css";
 import Image from "next/image";
+
+//styles
+import styles from "./OwnFeature.module.css";
 
 function OwnFeature() {
   return (
