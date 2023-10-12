@@ -7,6 +7,7 @@ import Features from "../modules/Features";
 import FAQs from "../modules/FAQs";
 import ContactUs from "../modules/ContactUs";
 import AboutUs from "../modules/AboutUs";
+import Supporters from "../modules/Supporters";
 
 function LandingPage() {
   return (
@@ -19,6 +20,7 @@ function LandingPage() {
         <FAQs />
         <ContactUs />
         <AboutUs />
+        <Supporters />
       </div>
     </div>
   );
