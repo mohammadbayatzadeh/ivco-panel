@@ -57,7 +57,15 @@
   .features {
     width: 100%;
   }
+  .content h4 {
+    font-size: 1.5em;
+  }
   .content {
+    width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  .option {
     width: 100%;
   }
 }

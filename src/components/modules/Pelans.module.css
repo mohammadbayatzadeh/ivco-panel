@@ -7,6 +7,9 @@
 .container h3 {
   font-size: 3em;
 }
+.container p {
+  text-align: center;
+}
 .pelans {
   width: 100%;
   margin: 100px auto;
@@ -14,8 +17,12 @@
   justify-content: space-between;
 }
 
-@media (max-width:900px) {
-    .pelans{
-        flex-wrap: wrap;
-    }
+@media (max-width: 900px) {
+  .pelans {
+    flex-wrap: wrap;
+  }
+  .container h3 {
+    text-align: center;
+    font-size: 2em;
+  }
 }

@@ -8,3 +8,9 @@
 .container h4 {
   font-size: 3em;
 }
+
+@media (max-width: 800px) {
+  .container h4 {
+    font-size: 2em;
+  }
+}

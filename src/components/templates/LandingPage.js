@@ -9,6 +9,7 @@ import ContactUs from "../modules/ContactUs";
 import AboutUs from "../modules/AboutUs";
 import Supporters from "../modules/Supporters";
 import Privacy from "../modules/Privacy";
+import Footer from "../modules/Footer";
 
 function LandingPage() {
   return (
@@ -23,6 +24,7 @@ function LandingPage() {
         <AboutUs />
         <Supporters />
         <Privacy />
+        <Footer />
       </div>
     </div>
   );

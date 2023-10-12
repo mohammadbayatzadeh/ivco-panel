@@ -53,6 +53,9 @@
   .container {
     flex-wrap: wrap-reverse;
   }
+  .content h4 {
+    font-size: 1.5em;
+  }
   .features {
     width: 100%;
   }

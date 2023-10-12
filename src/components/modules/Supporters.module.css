@@ -20,7 +20,7 @@
   transition: all 0.5s ease;
 }
 .icons img:hover {
-  filter: drop-shadow(30px 10px 4px #4444dd);
+  filter: drop-shadow(20px 10px 10px #4444dd);
 }
 
 @media (max-width: 1000px) {
@@ -29,6 +29,9 @@
   }
   .icons img {
     width: 40%;
+  }
+  .container h4 {
+    font-size: 1.5em;
   }
 }
 

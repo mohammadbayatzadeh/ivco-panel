@@ -68,4 +68,12 @@
   .icons {
     display: none;
   }
+  .intro h2 {
+    font-size: 2em;
+  }
+}
+@media (max-width: 800px) {
+  .intro h2 {
+    font-size: 2em;
+  }
 }
