@@ -12,7 +12,7 @@ function ContactUs() {
     enquiry: "",
   });
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id="contact">
       <h4>Contact Us</h4>
       <form className={styles.form}>
         <label>Name:</label>

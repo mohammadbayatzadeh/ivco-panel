@@ -15,19 +15,19 @@ function DashboardNav() {
       </label>
       <ul className={styles.menu}>
         <li>
-          <a href="#">Privacy Policy</a>
+          <a href="#privacy">Privacy Policy</a>
         </li>
         <li>
-          <a href="#">About Us</a>
+          <a href="#about">About Us</a>
         </li>
         <li>
-          <a href="#">FAQ</a>
+          <a href="#faq">FAQ</a>
         </li>
         <li>
-          <a href="#">Contact Us</a>
+          <a href="#contact">Contact Us</a>
         </li>
         <li>
-          <a href="#">App</a>
+          <a href="#app">App</a>
         </li>
       </ul>
     </nav>

@@ -8,7 +8,7 @@ import Pelan from "../../elements/Landing/items/Pelan";
 
 function Pelans() {
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id="app">
       <h3>A world of infinity in your hands</h3>
       <p>
         The world's first network game based on your trust. You can play and

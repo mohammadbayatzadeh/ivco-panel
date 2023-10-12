@@ -5,7 +5,7 @@ import styles from "./Aboutus.module.css";
 
 function Privacy() {
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id="privacy">
       <h4>Privacy Policy</h4>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime

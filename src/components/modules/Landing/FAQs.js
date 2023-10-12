@@ -8,7 +8,7 @@ import FAQ from "../../elements/Landing/items/FAQ";
 
 function FAQs() {
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id="faq">
       <h4>FAQ</h4>
       <FAQ />
       <FAQ />

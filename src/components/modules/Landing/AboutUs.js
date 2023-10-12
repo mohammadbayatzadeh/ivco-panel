@@ -5,7 +5,7 @@ import styles from "./Aboutus.module.css";
 
 function AboutUs() {
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id="about">
       <h4> About us</h4>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
