@@ -31,8 +31,8 @@ function AdvantageFeature() {
       </div>
       <div className={styles.content}>
         <h4>
-          Take full advantage of all that iwco has to offer today and in the
-          future
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
+          mollitia
         </h4>
         <div className={styles.options}>
           <div className={styles.option}>
@@ -42,7 +42,7 @@ function AdvantageFeature() {
               height={100}
               alt="option"
             />
-            <p>constant reviews and testing of our platform</p>
+            <p>Lorem ipsum dolor sit amet consectetur </p>
           </div>
           <div className={styles.option}>
             <Image
@@ -51,7 +51,7 @@ function AdvantageFeature() {
               height={100}
               alt="option"
             />
-            <p>security of your acconts</p>
+            <p>Lorem ipsum dolor sit amet consectetur </p>
           </div>
           <div className={styles.option}>
             <Image
@@ -60,7 +60,7 @@ function AdvantageFeature() {
               height={100}
               alt="option"
             />
-            <p>Online calculations and deposit of daily withrawals</p>
+            <p>Lorem ipsum dolor sit amet consectetur</p>
           </div>
           <div className={styles.option}>
             <Image
@@ -69,7 +69,7 @@ function AdvantageFeature() {
               height={100}
               alt="option"
             />
-            <p>Has the most powerful servers for gaming platforms</p>
+            <p>Lorem ipsum dolor sit amet consectetur Lorem</p>
           </div>
         </div>
       </div>

@@ -6,7 +6,13 @@ import styles from "./DashboardNav.module.css";
 function DashboardNav() {
   return (
     <nav className={styles.nav}>
-      <h1>IWCO</h1>
+      <div className={styles.wrapper}>
+        <svg>
+          <text x="50%" y="50%" dy=".35em" text-anchor="middle">
+            Lorem ipsum
+          </text>
+        </svg>
+      </div>
       <input type="checkbox" id="menu-toggle" className={styles.checkbox} />
       <label className={styles.hamburger} htmlFor="menu-toggle">
         <span></span>
