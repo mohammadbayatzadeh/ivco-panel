@@ -18,6 +18,7 @@
 
   /* Futureswap background colors */
   --background-blueblack: #07071c;
+  --dark-theme-body-background: #141414;
 
   /* Futureswap gradients. Numbers go left to right in gradient as they increase */
   --gradient-brand-color1: #00fed0;
