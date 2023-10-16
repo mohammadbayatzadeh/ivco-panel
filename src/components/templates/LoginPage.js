@@ -1,23 +1,28 @@
 "use client";
 import React, { useState } from "react";
 import styles from "./AuthPage.module.css";
+import axios from "axios";
 
 function LoginPage() {
   const [form, setForm] = useState({ email: "", password: "" });
-  const [fill, setFill] = useState({ email: false, password: false });
+
   const changeHandler = (e) => {
     const { value, name } = e.target;
-    if (value) {
-      setFill({ ...fill, [name]: true });
-    } else {
-      setFill({ ...fill, [name]: false });
-    }
-
     setForm({ ...form, [name]: value });
+  };
+
+  const submitHandler = async (e) => {
+    e.preventDefault();
+    console.log(form);
+
+    axios
+      .post("/api/auth/signup", { body: form })
+      .then((res) => console.log(res.data))
+      .catch((err) => console.log(err.response));
   };
   return (
     <div className={styles.body}>
-      <div className={styles.form}>
+      <form className={styles.form}>
         <h3>Login Form</h3>
         <p>Please sign-in to your account</p>
         <label>Email:</label>
@@ -34,7 +39,8 @@ function LoginPage() {
           name="password"
           type="password"
         />
-      </div>
+        <button onClick={submitHandler}>Login</button>
+      </form>
     </div>
   );
 }
