@@ -3,6 +3,9 @@ import React, { useState } from "react";
 import styles from "./AuthPage.module.css";
 import axios from "axios";
 
+import { ToastContainer, toast } from "react-toastify";
+import Toast from "../elements/Toast";
+
 function LoginPage() {
   const [form, setForm] = useState({ email: "", password: "" });
 
@@ -18,10 +21,14 @@ function LoginPage() {
     axios
       .post("/api/auth/signup", { body: form })
       .then((res) => console.log(res.data))
-      .catch((err) => console.log(err.response));
+      .catch((err) => {
+        console.log(err.response);
+        Toast(err.response.data.message , 'error')
+      });
   };
   return (
     <div className={styles.body}>
+      <ToastContainer />
       <form className={styles.form}>
         <h3>Login Form</h3>
         <p>Please sign-in to your account</p>

@@ -3,6 +3,8 @@ import "./globals.css";
 
 //fonts
 import { Irancell } from "@/utils/Fonts";
+import 'react-toastify/dist/ReactToastify.css';
+
 
 export const metadata = {
   title: "iwco",
