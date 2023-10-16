@@ -1,9 +1,8 @@
-import React from 'react'
+import RegisterPage from "@/components/templates/RegisterPage";
+import React from "react";
 
 function page() {
-  return (
-    <div>page</div>
-  )
+  return <RegisterPage />;
 }
 
-export default page
+export default page;

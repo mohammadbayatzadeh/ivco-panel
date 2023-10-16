@@ -2,12 +2,12 @@
 import React, { useState } from "react";
 import styles from "./AuthPage.module.css";
 import axios from "axios";
-
 import { ToastContainer } from "react-toastify";
-import Toast from "../elements/Toast";
 import Link from "next/link";
+import Toast from "../elements/Toast";
 import { BiHomeSmile } from "react-icons/bi";
-function LoginPage() {
+
+function RegisterPage() {
   const [form, setForm] = useState({ email: "", password: "" });
 
   const changeHandler = (e) => {
@@ -17,7 +17,6 @@ function LoginPage() {
 
   const submitHandler = async (e) => {
     e.preventDefault();
-    console.log(form);
 
     axios
       .post("/api/auth/signup", { body: form })
@@ -28,6 +27,7 @@ function LoginPage() {
         Toast(err.response.data.message, "error");
       });
   };
+
   return (
     <div className={styles.body}>
       <Link href="/" className={styles.home}>
@@ -35,8 +35,8 @@ function LoginPage() {
       </Link>
       <ToastContainer />
       <form className={styles.form}>
-        <h3>Login Form</h3>
-        <p>Please sign-in to your account</p>
+        <h3>Register Form</h3>
+        <p>Make your app management easy and fun!</p>
         <label>Email:</label>
         <input
           value={form.email}
@@ -51,12 +51,12 @@ function LoginPage() {
           name="password"
           type="password"
         />
-        <button onClick={submitHandler}>Login</button>
+        <button onClick={submitHandler}>Register</button>
       </form>
-      <p>not have account?</p>
-      <Link href="/signup">Register</Link>
+      <p> have account?</p>
+      <Link href="/login">Login</Link>
     </div>
   );
 }
 
-export default LoginPage;
+export default RegisterPage;

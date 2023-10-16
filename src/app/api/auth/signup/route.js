@@ -1,5 +1,6 @@
 import User from "@/models/User.model";
 import connectDB from "@/utils/connectDB";
+import { hashPassword } from "@/utils/functions";
 import { NextResponse } from "next/server";
 
 export async function POST(req) {
@@ -8,11 +9,18 @@ export async function POST(req) {
     const {
       body: { email, password },
     } = await req.json();
+
     if (!email || !password) {
       return NextResponse.json(
         {
           message: "please insert valid and complete data",
         },
+        { status: 400 }
+      );
+    }
+    if (!email.match(/[a-zA-Z]+[a-zA-Z0-9/./-/_]{3}@[a-z]{3,10}.[a-z]/)) {
+      return NextResponse.json(
+        { message: "email is not valid" },
         { status: 400 }
       );
     }
@@ -23,6 +31,14 @@ export async function POST(req) {
         { status: 400 }
       );
     }
+    const hash = hashPassword(password);
+
+    const result = await User.create({ email, password: hash });
+    return NextResponse.json(
+      { message: "user registered", data: result },
+      { status: 201 }
+    );
+    console.log(hash);
   } catch (error) {
     return NextResponse.json(
       { message: "internal service error" },
