@@ -25,9 +25,13 @@
   position: absolute;
   top: 20px;
   left: 20px;
+  transition: all .5s ease;
 }
 .home svg {
   position: relative;
+}
+.home:hover {
+  color: var(--gradient-green-color1) !important;
 }
 .body a {
   color: var(--gradient-green-color1);

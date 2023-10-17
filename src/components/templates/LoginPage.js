@@ -1,14 +1,20 @@
 "use client";
 import React, { useState } from "react";
-import styles from "./AuthPage.module.css";
 import axios from "axios";
-
-import { ToastContainer } from "react-toastify";
 import Toast from "../elements/Toast";
 import Link from "next/link";
+import { signIn } from "next-auth/react";
+
+//styles
+import styles from "./AuthPage.module.css";
+
+//icons
 import { BiHomeSmile } from "react-icons/bi";
+import { useRouter } from "next/navigation";
+
 function LoginPage() {
   const [form, setForm] = useState({ email: "", password: "" });
+  const router = useRouter();
 
   const changeHandler = (e) => {
     const { value, name } = e.target;
@@ -17,23 +23,23 @@ function LoginPage() {
 
   const submitHandler = async (e) => {
     e.preventDefault();
-    console.log(form);
-
-    axios
-      .post("/api/auth/signup", { body: form })
-      .then((res) => {
-        Toast(res.data.message, "success");
-      })
-      .catch((err) => {
-        Toast(err.response.data.message, "error");
-      });
+    const res = await signIn("credentials", {
+      email: form.email,
+      password: form.password,
+      redirect: false,
+    });
+    if (res.error) {
+      Toast(res.error, "error");
+    } else {
+      Toast("ورود موفقیت آمیز بود", "success");
+      router.push("/dashboard");
+    }
   };
   return (
     <div className={styles.body}>
       <Link href="/" className={styles.home}>
         <BiHomeSmile />
       </Link>
-      <ToastContainer />
       <form className={styles.form}>
         <h3>Login Form</h3>
         <p>Please sign-in to your account</p>

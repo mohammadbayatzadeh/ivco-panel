@@ -8,7 +8,7 @@ function DashboardNav() {
     <nav className={styles.nav}>
       <div className={styles.wrapper}>
         <svg>
-          <text x="50%" y="50%" dy=".35em" text-anchor="middle">
+          <text x="50%" y="50%" dy=".35em" textAnchor="middle">
             Lorem ipsum
           </text>
         </svg>

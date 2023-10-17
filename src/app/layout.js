@@ -1,10 +1,9 @@
 //styles
+import Layout from "@/components/layouts/Layout";
 import "./globals.css";
 
 //fonts
 import { Irancell } from "@/utils/Fonts";
-import 'react-toastify/dist/ReactToastify.css';
-
 
 export const metadata = {
   title: "iwco",
@@ -14,7 +13,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" dir="ltr">
-      <body className={Irancell.className}>{children}</body>
+      <Layout>
+        <body className={Irancell.className}>{children}</body>
+      </Layout>
     </html>
   );
 }
