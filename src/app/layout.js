@@ -4,6 +4,8 @@ import "./globals.css";
 
 //fonts
 import { Irancell } from "@/utils/Fonts";
+import { ToastContainer } from "react-toastify";
+import NextAuthProvider from "@/providers/NextAuthProvider";
 
 export const metadata = {
   title: "iwco",
@@ -13,9 +15,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" dir="ltr">
-      <Layout>
-        <body className={Irancell.className}>{children}</body>
-      </Layout>
+      <NextAuthProvider>
+        <Layout>
+          <ToastContainer />
+          <body className={Irancell.className}>{children}</body>
+        </Layout>
+      </NextAuthProvider>
     </html>
   );
 }

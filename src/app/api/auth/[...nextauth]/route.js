@@ -13,18 +13,18 @@ export const authOptions = {
         try {
           await connectDB();
         } catch {
-          throw new Error("مشکلی در سرور رخ داده است.");
+          throw new Error("internal service error");
         }
 
         const { email, password } = credentials;
         if (!email || !password)
-          throw new Error("لطفا اطلاعات را کامل وارد کنید");
+          throw new Error("please insert valid and complete data");
 
         const user = await User.findOne({ email });
-        if (!user) throw new Error("ابتدا حسال کاربری ایجاد کنید");
+        if (!user) throw new Error("there is no account with this email");
 
         const isValid = await comparepasswords(password, user.password);
-        if (!isValid) throw new Error("ایمیل یا رمزعبور اشتباه است");
+        if (!isValid) throw new Error("email or password is incorrect");
 
         return { email };
       },

@@ -1,9 +1,9 @@
 "use client";
 import React, { useState } from "react";
-import axios from "axios";
 import Toast from "../elements/Toast";
 import Link from "next/link";
 import { signIn } from "next-auth/react";
+import BeatLoader from "react-spinners/BeatLoader";
 
 //styles
 import styles from "./AuthPage.module.css";
@@ -14,6 +14,7 @@ import { useRouter } from "next/navigation";
 
 function LoginPage() {
   const [form, setForm] = useState({ email: "", password: "" });
+  const [loading, setLoading] = useState(false);
   const router = useRouter();
 
   const changeHandler = (e) => {
@@ -23,15 +24,18 @@ function LoginPage() {
 
   const submitHandler = async (e) => {
     e.preventDefault();
+    setLoading(true);
     const res = await signIn("credentials", {
       email: form.email,
       password: form.password,
       redirect: false,
     });
+
     if (res.error) {
+      setLoading(false);
       Toast(res.error, "error");
     } else {
-      Toast("ورود موفقیت آمیز بود", "success");
+      Toast("welcome back", "success");
       router.push("/dashboard");
     }
   };
@@ -57,7 +61,20 @@ function LoginPage() {
           name="password"
           type="password"
         />
-        <button onClick={submitHandler}>Login</button>
+
+        <button onClick={submitHandler}>
+          {loading ? (
+            <BeatLoader
+              color="white"
+              loading={loading}
+              size={30}
+              aria-label="Loading Spinner"
+              data-testid="loader"
+            />
+          ) : (
+            "Login"
+          )}
+        </button>
       </form>
       <p>not have account?</p>
       <Link href="/signup">Register</Link>

@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import BeatLoader from "react-spinners/BeatLoader";
 
 //styles
 import styles from "./AuthPage.module.css";
@@ -15,6 +16,7 @@ import { BiHomeSmile } from "react-icons/bi";
 
 function RegisterPage() {
   const [form, setForm] = useState({ email: "", password: "" });
+  const [loading, setLoading] = useState(false);
   const router = useRouter();
 
   const changeHandler = (e) => {
@@ -24,7 +26,7 @@ function RegisterPage() {
 
   const submitHandler = async (e) => {
     e.preventDefault();
-
+    setLoading(true);
     axios
       .post("/api/auth/signup", { body: form })
       .then((res) => {
@@ -33,6 +35,7 @@ function RegisterPage() {
       })
       .catch((err) => {
         Toast(err.response.data.message, "error");
+        setLoading(false);
       });
   };
 
@@ -58,7 +61,19 @@ function RegisterPage() {
           name="password"
           type="password"
         />
-        <button onClick={submitHandler}>Register</button>
+        <button onClick={submitHandler}>
+          {loading ? (
+            <BeatLoader
+              color="white"
+              loading={loading}
+              size={30}
+              aria-label="Loading Spinner"
+              data-testid="loader"
+            />
+          ) : (
+            "Register"
+          )}
+        </button>
       </form>
       <p> have account?</p>
       <Link href="/login">Login</Link>

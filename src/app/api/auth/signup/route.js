@@ -33,7 +33,7 @@ export async function POST(req) {
     const existingUser = await User.findOne({ email });
     if (existingUser) {
       return NextResponse.json(
-        { message: "this email alreadty registered" },
+        { message: "this email already registered" },
         { status: 400 }
       );
     }
