@@ -4,7 +4,7 @@ import React from "react";
 import styles from "./LandingPage.module.css";
 
 //nav
-import DashboardNav from "../layouts/DashboardNav";
+import LandingNav from "../layouts/LandingNav";
 
 //components
 import LandingBanner from "../modules/Landing/LandingBanner";
@@ -21,7 +21,7 @@ function LandingPage() {
   return (
     <div className={styles.body}>
       <div className={styles.container}>
-        <DashboardNav />
+        <LandingNav />
         <LandingBanner />
         <Pelans />
         <Features />

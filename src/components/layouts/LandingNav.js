@@ -1,9 +1,9 @@
 import React from "react";
 
 //styles
-import styles from "./DashboardNav.module.css";
+import styles from "./LandingNav.module.css";
 
-function DashboardNav() {
+function LandingNav() {
   return (
     <nav className={styles.nav}>
       <div className={styles.wrapper}>
@@ -40,4 +40,4 @@ function DashboardNav() {
   );
 }
 
-export default DashboardNav;
+export default LandingNav;
