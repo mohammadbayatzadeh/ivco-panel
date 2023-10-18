@@ -7,16 +7,31 @@ import styles from "./LandingBanner.module.css";
 
 //components
 import CoinIcon from "../../elements/Landing/items/CoinIcon";
+import connectDB from "@/utils/connectDB";
+import { getServerSession } from "next-auth";
+import { authOptions } from "@/app/api/auth/[...nextauth]/route";
+import { getNameFromEmail } from "@/utils/functions";
 
-function LandingBanner() {
+async function LandingBanner() {
+  await connectDB();
+  const session = await getServerSession(authOptions);
+  const email = session?.user?.email;
   return (
     <section className={styles.container}>
       <div className={styles.intro}>
         <h2>our credibility is your trust</h2>
         <p>International winners company</p>
         <div className={styles.buttons}>
-          <Link href="/login">LOGIN</Link>
-          <Link href="/signup">SIGNUP</Link>
+          {email ? (
+            <Link href="/dashboard">
+              Welcome Back {getNameFromEmail(email)}
+            </Link>
+          ) : (
+            <>
+              <Link href="/login">LOGIN</Link>
+              <Link href="/signup">SIGNUP</Link>
+            </>
+          )}
         </div>
       </div>
 

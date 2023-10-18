@@ -1,0 +1,26 @@
+.container {
+  width: 200px;
+  height: 100vh;
+  position: absolute;
+  padding: 60px 15px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  top: 0px;
+  left: -200px;
+  transition: all 0.5s ease;
+  background-color: #ffffff33;
+  backdrop-filter: blur(8px);
+  /* overflow-y: scroll; */
+}
+.active {
+  left: 0;
+}
+@media (max-width: 400px) {
+  .container {
+    left: -100%;
+    width: 100%;
+  }
+  .active {
+    left: 0;
+  }
+}
