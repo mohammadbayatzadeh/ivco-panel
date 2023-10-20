@@ -29,7 +29,7 @@ function DashboardSideBar({ show }) {
       <DashboardItem title="Withdrawal" icon={<GiTakeMyMoney />} />
       <DashboardItem title="Support" icon={<SlSupport />} />
       <DashboardItem title="profile" icon={<GiPlagueDoctorProfile />} />
-      <DashboardItem title="Log Out" icon={<PiSignOutBold />} />
+      <DashboardItem title="Log Out" icon={<PiSignOutBold />} signout={true} />
     </aside>
   );
 }

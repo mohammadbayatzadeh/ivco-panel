@@ -13,6 +13,7 @@ import DashboardSideBar from "./DashboardSideBar";
 
 function DashboardLayout({ children, email }) {
   const [showSidebar, setShowSidebar] = useState(false);
+
   return (
     <div className={styles.container}>
       <nav className={styles.navbar}>
