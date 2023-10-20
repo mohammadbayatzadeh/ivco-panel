@@ -1,0 +1,10 @@
+.link {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+.link svg {
+  font-size: 1.5em;
+  transform: translateY(-2px);
+  margin-right: 7px;
+}

@@ -1,11 +1,10 @@
 //styles
-import Layout from "@/components/layouts/Layout";
 import "./globals.css";
 
 //fonts
 import { Irancell } from "@/utils/Fonts";
-import { ToastContainer } from "react-toastify";
 import NextAuthProvider from "@/providers/NextAuthProvider";
+import Layout from "@/components/layouts/Layout";
 
 export const metadata = {
   title: "iwco",
@@ -17,8 +16,7 @@ export default function RootLayout({ children }) {
     <html lang="en" dir="ltr">
       <NextAuthProvider>
         <Layout>
-          <ToastContainer />
-          <body className={Irancell.className}>{children}</body>
+          <div className={Irancell.className}>{children}</div>
         </Layout>
       </NextAuthProvider>
     </html>

@@ -1,11 +1,13 @@
-"use client";
-import React from "react";
-
-//components
+import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function Layout({ children }) {
-  return <div>{children}</div>;
+  return (
+    <body>
+      <ToastContainer />
+      {children}
+    </body>
+  );
 }
 
 export default Layout;
