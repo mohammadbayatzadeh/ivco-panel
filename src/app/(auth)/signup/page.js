@@ -3,7 +3,7 @@ import { redirect } from "next/navigation";
 import { getServerSession } from "next-auth";
 
 //template
-import RegisterPage from "@/components/templates/RegisterPage";
+import RegisterPage from "@/components/templates/auth/RegisterPage";
 
 async function page() {
   const session = await getServerSession(authOptions);

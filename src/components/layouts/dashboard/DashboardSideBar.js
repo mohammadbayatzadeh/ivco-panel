@@ -4,7 +4,7 @@
 import styles from "./DashboardSideBar.module.css";
 
 //components
-import DashboardItem from "../elements/DashboardItem";
+import DashboardItem from "../../elements/dashboard/DashboardItem";
 
 //icons
 import { RxDashboard } from "react-icons/rx";

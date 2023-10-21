@@ -3,7 +3,7 @@ import { redirect } from "next/navigation";
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 
 //layout
-import DashboardLayout from "@/components/layouts/DashboardLayout";
+import DashboardLayout from "@/components/layouts/dashboard/DashboardLayout";
 import connectDB from "@/utils/connectDB";
 
 async function layout({ children }) {

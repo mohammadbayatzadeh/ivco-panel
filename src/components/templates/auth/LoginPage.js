@@ -1,20 +1,18 @@
 "use client";
 import React, { useState } from "react";
-import axios from "axios";
+import Toast from "../../elements/Toast";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { signIn } from "next-auth/react";
 import BeatLoader from "react-spinners/BeatLoader";
 
 //styles
 import styles from "./AuthPage.module.css";
 
-//components
-import Toast from "../elements/Toast";
-
 //icons
 import { BiHomeSmile } from "react-icons/bi";
+import { useRouter } from "next/navigation";
 
-function RegisterPage() {
+function LoginPage() {
   const [form, setForm] = useState({ email: "", password: "" });
   const [loading, setLoading] = useState(false);
   const router = useRouter();
@@ -27,26 +25,28 @@ function RegisterPage() {
   const submitHandler = async (e) => {
     e.preventDefault();
     setLoading(true);
-    axios
-      .post("/api/auth/signup", { body: form })
-      .then((res) => {
-        router.push("/login");
-        Toast(res.data.message, "success");
-      })
-      .catch((err) => {
-        Toast(err.response.data.message, "error");
-        setLoading(false);
-      });
-  };
+    const res = await signIn("credentials", {
+      email: form.email,
+      password: form.password,
+      redirect: false,
+    });
 
+    if (res.error) {
+      setLoading(false);
+      Toast(res.error, "error");
+    } else {
+      Toast("welcome back", "success");
+      router.push("/dashboard");
+    }
+  };
   return (
     <div className={styles.body}>
       <Link href="/" className={styles.home}>
         <BiHomeSmile />
       </Link>
       <form className={styles.form}>
-        <h3>Register Form</h3>
-        <p>Make your app management easy and fun!</p>
+        <h3>Login Form</h3>
+        <p>Please sign-in to your account</p>
         <label>Email:</label>
         <input
           value={form.email}
@@ -61,6 +61,7 @@ function RegisterPage() {
           name="password"
           type="password"
         />
+
         <button onClick={submitHandler}>
           {loading ? (
             <BeatLoader
@@ -71,14 +72,14 @@ function RegisterPage() {
               data-testid="loader"
             />
           ) : (
-            "Register"
+            "Login"
           )}
         </button>
       </form>
-      <p> have account?</p>
-      <Link href="/login">Login</Link>
+      <p>not have account?</p>
+      <Link href="/signup">Register</Link>
     </div>
   );
 }
 
-export default RegisterPage;
+export default LoginPage;
