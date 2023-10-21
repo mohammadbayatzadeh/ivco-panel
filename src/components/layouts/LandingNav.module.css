@@ -15,6 +15,7 @@
   stroke-width: 52;
   stroke: #fff;
   font-size: 2em;
+  cursor: pointer;
 }
 @keyframes stroke {
   0% {

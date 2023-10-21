@@ -3,9 +3,13 @@
   align-items: center;
   margin: 10px 0;
   cursor: pointer;
+  transition: all 0.5s ease;
 }
 .link svg {
   font-size: 1.5em;
   transform: translateY(-2px);
   margin-right: 7px;
+}
+.link:hover{
+  color: var(--primary-blue-100);
 }
