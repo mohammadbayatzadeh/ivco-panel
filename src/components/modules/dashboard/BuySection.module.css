@@ -1,7 +1,87 @@
 .container {
-  width: 50%;
-  min-width: 300px;
+  width: 30vw;
   border-radius: 10px;
   padding: 15px;
-  background-color: var(--dark-theme-body-background) ;
+  background-color: var(--dark-theme-body-background);
+}
+.container select {
+  width: 100%;
+  background-color: var(--dark-theme-body-background);
+  padding: 10px;
+  border-radius: 10px;
+  color: #fff;
+}
+.radio {
+  margin: 10px 0;
+  font-size: 1.2em;
+  display: flex;
+  align-items: baseline;
+}
+.radio label,
+.radio input {
+  margin-right: 10px;
+}
+
+.input input {
+  width: 100%;
+  color: #fff;
+  background-color: var(--neutral-grey5-50);
+  outline: none;
+  border: 2px solid var(--gradient-green-color1);
+  padding: 7px 10px;
+  border-radius: 7px;
+}
+
+.input label {
+  color: var(--gradient-green-color1);
+  user-select: none;
+  margin-top: 10px;
+  display: block;
+}
+.id {
+  width: 100%;
+  background-color: var(--dark-theme-body-background);
+  padding: 10px;
+  margin-top: 10px;
+  font-size: 0.8em;
+  border-radius: 10px;
+  border: #fff 1px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+.id svg {
+  transform: translateY(-2px);
+  margin-right: 5px;
+  color: red;
+}
+.id:hover {
+  background-color: var(--neutral-grey5-50);
+}
+.warning {
+  width: 100%;
+  background-color: red;
+  padding: 10px;
+  margin-top: 10px;
+  font-size: 1em;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.container button {
+  width: 100%;
+  background-color: var(--primary-green-40);
+  padding: 10px;
+  border: none;
+  color: #fff;
+  margin-top: 10px;
+  font-size: 1.2em;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.container button:hover {
+  background-color: var(--primary-green-100);
 }
