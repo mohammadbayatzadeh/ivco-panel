@@ -12,6 +12,7 @@
   transition: all 0.5s ease;
   background-color: #ffffff33;
   backdrop-filter: blur(8px);
+  z-index: 1;
 }
 .active {
   left: 0;

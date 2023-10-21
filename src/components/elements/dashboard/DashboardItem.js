@@ -22,7 +22,7 @@ function DashboardItem({ title, href, icon, signout }) {
     );
   } else {
     return (
-      <Link href="/" className={styles.link}>
+      <Link href={`${href}`} className={styles.link}>
         {icon}
         {title}
       </Link>

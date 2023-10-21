@@ -21,14 +21,34 @@ function DashboardSideBar({ show }) {
         show ? `${styles.container} ${styles.active}` : styles.container
       }
     >
-      <DashboardItem title="Dashboard" icon={<RxDashboard />} />
-      <DashboardItem title="Commission" icon={<BsPercent />} />
-      <DashboardItem title="OwnerShip" icon={<BsWifi />} />
-      <DashboardItem title="TopUp" icon={<MdAirlineStops />} />
-      <DashboardItem title="Wallet" icon={<SlWallet />} />
-      <DashboardItem title="Withdrawal" icon={<GiTakeMyMoney />} />
-      <DashboardItem title="Support" icon={<SlSupport />} />
-      <DashboardItem title="profile" icon={<GiPlagueDoctorProfile />} />
+      <DashboardItem
+        title="Dashboard"
+        icon={<RxDashboard />}
+        href="/dashboard"
+      />
+      <DashboardItem
+        title="Commission"
+        icon={<BsPercent />}
+        href="/dashboard"
+      />
+      <DashboardItem title="OwnerShip" icon={<BsWifi />} href="/dashboard" />
+      <DashboardItem
+        title="TopUp"
+        icon={<MdAirlineStops />}
+        href="/dashboard"
+      />
+      <DashboardItem title="Wallet" icon={<SlWallet />} href="/dashboard" />
+      <DashboardItem
+        title="Withdrawal"
+        icon={<GiTakeMyMoney />}
+        href="/dashboard"
+      />
+      <DashboardItem title="Support" icon={<SlSupport />} href="/dashboard" />
+      <DashboardItem
+        title="profile"
+        icon={<GiPlagueDoctorProfile />}
+        href="/dashboard"
+      />
       <DashboardItem title="Log Out" icon={<PiSignOutBold />} signout={true} />
     </aside>
   );

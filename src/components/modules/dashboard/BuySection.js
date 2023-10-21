@@ -48,7 +48,7 @@ function BuySection() {
           </div>
         ) : null}
 
-        <CopyToClipboard text={id} onCopy={() => Toast("id copied", "success")}>
+        <CopyToClipboard text={id} onCopy={() => Toast("id copied", "info")}>
           <div className={styles.id}>
             <BiSolidCopy />
             {id}
