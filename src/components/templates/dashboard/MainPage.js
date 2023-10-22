@@ -6,8 +6,8 @@ import InfoSection from "@/components/modules/dashboard/InfoSection";
 function MainPage() {
   return (
     <div className={styles.container}>
-      <BuySection />
       <InfoSection />
+      <BuySection />
     </div>
   );
 }

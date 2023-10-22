@@ -1,0 +1,21 @@
+.container {
+  background-color: var(--dark-theme-body-item);
+  padding: 15px;
+  border-radius: 10px;
+  width: 49%;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.price {
+  color: gold;
+  font-size: 1.2em;
+  display: flex;
+  align-items: baseline;
+}
+.price svg {
+  transform: translateY(2px);
+}

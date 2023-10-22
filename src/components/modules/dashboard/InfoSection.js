@@ -4,6 +4,8 @@ import styles from "./InfoSection.module.css";
 import CopyToClipboard from "react-copy-to-clipboard";
 import GradientBorder from "@/components/elements/GradientBorder";
 import Toast from "@/components/elements/Toast";
+import DashboardCard from "@/components/elements/dashboard/DashboardCard";
+import CreditCard from "@/components/elements/dashboard/CreditCard";
 
 function InfoSection() {
   return (
@@ -26,6 +28,18 @@ function InfoSection() {
             <p className={styles.idButton}>L1966@4606</p>
           </CopyToClipboard>
         </GradientBorder>
+      </div>
+      <div className={styles.row}>
+        <div className={styles.cards}>
+          <DashboardCard title="Starter" value="5.00" />
+          <DashboardCard title="Coins" value="25.00" />
+          <DashboardCard title="Withdraw" value="0" />
+          <DashboardCard title="Direct Sell" value="0" />
+          <DashboardCard title="Commission" value="0" />
+        </div>
+        <div className={styles.credit}>
+          <CreditCard />
+        </div>
       </div>
     </div>
   );
