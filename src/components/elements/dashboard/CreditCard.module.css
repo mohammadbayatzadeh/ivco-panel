@@ -1,2 +1,24 @@
 .container {
+  width: 100%;
+  padding: 20px 15px;
+  border-radius: 15px;
+}
+.row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.row svg {
+  font-size: 2em;
+}
+.code {
+  font-size: 0.7em;
+  margin: 10px 0;
+}
+.balance {
+  font-size: 1.5em;
+}
+.balance svg {
+  transform: translateY(3px);
 }

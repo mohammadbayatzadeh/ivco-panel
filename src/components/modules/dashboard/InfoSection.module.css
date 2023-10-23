@@ -22,7 +22,7 @@
 }
 .cards {
   display: flex;
-  width: 60%;
+  width: 59%;
   flex-wrap: wrap;
   justify-content: space-between;
 }

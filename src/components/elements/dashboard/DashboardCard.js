@@ -14,6 +14,7 @@ function DashboardCard({ title, value }) {
         <TbBrandCashapp />
         {value}
       </p>
+      <span></span>
     </div>
   );
 }
