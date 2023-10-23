@@ -6,7 +6,7 @@ import { TbBrandCashapp } from "react-icons/tb";
 
 function CreditCard() {
   return (
-    <GradientBorder width="100%">
+    <GradientBorder width="100%" marginB='10px'>
       <div className={styles.container}>
         <div className={styles.row}>
           <p>IVCO Pay</p>

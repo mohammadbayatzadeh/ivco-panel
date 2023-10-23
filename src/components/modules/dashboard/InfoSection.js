@@ -39,6 +39,8 @@ function InfoSection() {
         </div>
         <div className={styles.credit}>
           <CreditCard />
+          <DashboardCard width="100%" title="Total WSA and WGA" value="10.00" />
+          <DashboardCard width="100%" title="Your Weekly Point" value="10.00" />
         </div>
       </div>
     </div>
