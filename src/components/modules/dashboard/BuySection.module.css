@@ -3,7 +3,6 @@
   min-width: 350px;
   border-radius: 10px;
   padding: 15px;
-  
   background-color: var(--dark-theme-body-background);
 }
 .container select {
@@ -86,4 +85,11 @@
 }
 .container button:hover {
   background-color: var(--primary-green-100);
+}
+
+@media (max-width: 800px) {
+  .container {
+    width: calc(100vw - 50px);
+    min-width: 0 !important;
+  }
 }

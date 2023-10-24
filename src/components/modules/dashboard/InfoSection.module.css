@@ -33,3 +33,15 @@
   flex-direction: column;
   align-items: center;
 }
+
+@media (max-width: 800px) {
+  .row {
+    flex-wrap: wrap-reverse;
+  }
+  .credit {
+    width: 100%;
+  }
+  .cards {
+    width: 100%;
+  }
+}
