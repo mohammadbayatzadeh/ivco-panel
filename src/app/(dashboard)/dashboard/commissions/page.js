@@ -1,8 +1,8 @@
 //styles
-import Commissions from "@/components/templates/dashboard/Commissions";
+import CommissionsPage from "@/components/templates/dashboard/CommissionsPage";
 
 function page() {
-  return <Commissions />;
+  return <CommissionsPage />;
 }
 
 export default page;

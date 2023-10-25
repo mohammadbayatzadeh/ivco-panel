@@ -1,9 +1,10 @@
 "use client";
-//styles
 import { useState } from "react";
-import styles from "./Commissions.module.css";
 
-function Commissions() {
+//styles
+import styles from "./CommissionsPage.module.css";
+
+function CommissionsPage() {
   const [filter, setFilter] = useState("All");
 
   return (
@@ -58,4 +59,4 @@ function Commissions() {
   );
 }
 
-export default Commissions;
+export default CommissionsPage;

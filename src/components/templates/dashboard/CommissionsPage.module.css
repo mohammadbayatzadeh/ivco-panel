@@ -10,7 +10,7 @@
   margin-top: 5vw;
 }
 .container p {
-  font-size: 0.8em;
+  font-size: 1em;
 }
 .filter {
   background-color: var(--neutral-grey5-50);
@@ -20,13 +20,17 @@
   border-top-left-radius: 15px;
   display: flex;
   justify-content: space-between;
-  width: 150px;
   margin-top: 2vw;
 }
 
 .filter span {
   cursor: pointer;
   transition: all 0.5s ease;
+  margin-right: 10px;
+}
+
+.filter span:last-child {
+  margin-right: 0;
 }
 
 .table {
@@ -56,7 +60,7 @@
 
 @media (max-width: 500px) {
   .headers,
-  .example {
+  .example ,.filter{
     font-size: 0.5em;
   }
 }

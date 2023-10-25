@@ -34,7 +34,7 @@ function DashboardSideBar({ show }) {
       <DashboardItem
         title="OwnerShip"
         icon={<BsWifi />}
-        href="/dashboard/ownerShip"
+        href="/dashboard/ownership"
       />
       <DashboardItem
         title="TopUp"

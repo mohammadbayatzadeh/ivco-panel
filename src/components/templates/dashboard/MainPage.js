@@ -1,5 +1,7 @@
-import React from "react";
+//styles
 import styles from "./Mainpage.module.css";
+
+//components
 import BuySection from "@/components/modules/dashboard/BuySection";
 import InfoSection from "@/components/modules/dashboard/InfoSection";
 import LineChart from "@/components/elements/charts/LineChart";
