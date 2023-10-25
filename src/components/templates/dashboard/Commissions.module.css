@@ -13,5 +13,50 @@
   font-size: 0.8em;
 }
 .filter {
-    background-color: var();
+  background-color: var(--neutral-grey5-50);
+  padding: 7px 15px;
+  font-size: 0.8em;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  width: 150px;
+  margin-top: 2vw;
+}
+
+.filter span {
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.table {
+  width: 100%;
+}
+.headers {
+  width: 100%;
+  display: grid;
+  grid-template: 1fr / repeat(6, 1fr);
+  justify-items: center;
+  background-color: var(--neutral-grey5-50);
+  border-top-right-radius: 10px;
+  padding: 7px 0;
+  margin-top: 2px;
+  font-size: 0.8em;
+}
+.example {
+  width: 100%;
+  display: grid;
+  grid-template: 1fr / repeat(6, 1fr);
+  justify-items: center;
+  background-color: var(--neutral-grey5-100);
+  padding: 7px 0;
+  margin-top: 5px;
+  font-size: 0.8em;
+}
+
+@media (max-width: 500px) {
+  .headers,
+  .example {
+    font-size: 0.5em;
+  }
 }
