@@ -1,5 +1,5 @@
 .container {
-  width: 200px;
+  width: 220px;
   height: 100vh;
   position: absolute;
   display: flex;
@@ -8,7 +8,7 @@
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   top: 0px;
-  left: -200px;
+  left: -220px;
   transition: all 0.5s ease;
   background-color: #ffffff33;
   backdrop-filter: blur(8px);
