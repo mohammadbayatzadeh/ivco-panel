@@ -12,6 +12,9 @@
   padding: 20px 40px;
   background-color: var(--neutral-grey5-50);
 }
+.body{
+  min-height: calc(100vh - 70px);
+}
 .navbar p {
   font-size: 1.5em;
 }

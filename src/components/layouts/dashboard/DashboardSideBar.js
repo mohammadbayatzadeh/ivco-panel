@@ -27,27 +27,39 @@ function DashboardSideBar({ show }) {
         href="/dashboard"
       />
       <DashboardItem
-        title="Commission"
+        title="Commissions"
         icon={<BsPercent />}
-        href="/dashboard"
+        href="/dashboard/commissions"
       />
-      <DashboardItem title="OwnerShip" icon={<BsWifi />} href="/dashboard" />
+      <DashboardItem
+        title="OwnerShip"
+        icon={<BsWifi />}
+        href="/dashboard/ownerShip"
+      />
       <DashboardItem
         title="TopUp"
         icon={<MdAirlineStops />}
-        href="/dashboard"
+        href="/dashboard/topup"
       />
-      <DashboardItem title="Wallet" icon={<SlWallet />} href="/dashboard" />
+      <DashboardItem
+        title="Wallet"
+        icon={<SlWallet />}
+        href="/dashboard/wallet"
+      />
       <DashboardItem
         title="Withdrawal"
         icon={<GiTakeMyMoney />}
-        href="/dashboard"
+        href="/dashboard/withdrawal"
       />
-      <DashboardItem title="Support" icon={<SlSupport />} href="/dashboard" />
+      <DashboardItem
+        title="Support"
+        icon={<SlSupport />}
+        href="/dashboard/support"
+      />
       <DashboardItem
         title="profile"
         icon={<GiPlagueDoctorProfile />}
-        href="/dashboard"
+        href="/dashboard/profile"
       />
       <DashboardItem title="Log Out" icon={<PiSignOutBold />} signout={true} />
     </aside>
