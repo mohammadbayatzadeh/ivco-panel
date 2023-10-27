@@ -4,16 +4,13 @@ import { useState } from "react";
 //styles
 import styles from "./CommissionsPage.module.css";
 
-function CommissionsPage() {
+function WalletPage() {
   const [filter, setFilter] = useState("All");
 
   return (
     <div className={styles.container}>
-      <h2>Commissions</h2>
-      <p>
-        In this section, you can see all your Daily commissions from invest and
-        binary plan
-      </p>
+      <h2>Wallet</h2>
+      <p>In this section, you can see all your detail balance</p>
       <div className={styles.filter}>
         <span
           onClick={() => setFilter("All")}
@@ -22,38 +19,38 @@ function CommissionsPage() {
           All
         </span>
         <span
-          onClick={() => setFilter("Pending")}
-          style={{ color: filter === "Pending" ? "gold" : "white" }}
+          onClick={() => setFilter("Debtor")}
+          style={{ color: filter === "Debtor" ? "gold" : "white" }}
         >
-          Pending
+          Debtor
         </span>
         <span
-          onClick={() => setFilter("Paid")}
-          style={{ color: filter === "Paid" ? "gold" : "white" }}
+          onClick={() => setFilter("Creditor")}
+          style={{ color: filter === "Creditor" ? "gold" : "white" }}
         >
-          Paid
+          Creditor
         </span>
       </div>
       <div className={styles.table}>
         <div className={styles.headers}>
-          <span>C-ID</span>
-          <span>Day</span>
-          <span>Amount ($)</span>
-          <span>Status</span>
+          <span>ID</span>
+          <span>Title</span>
+          <span>Type</span>
+          <span>Creditor($)</span>
           <span>Created at</span>
           <span>operation</span>
         </div>
         <div className={styles.example}>
           <span>id</span>
-          <span>7 july</span>
-          <span>20.00 $</span>
-          <span>Paid</span>
+          <span>TopUp in the amount of $ 5</span>
+          <span>Point</span>
+          <span>2.00 </span>
           <span>5 july</span>
-          <span>example</span>
+          <span>show</span>
         </div>
       </div>
     </div>
   );
 }
 
-export default CommissionsPage;
+export default WalletPage;

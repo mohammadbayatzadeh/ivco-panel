@@ -14,42 +14,36 @@ function OwnerShipPage() {
       <div className={styles.filter}>
         <span
           onClick={() => setFilter("All")}
-          name="All"
           style={{ color: filter === "All" ? "gold" : "white" }}
         >
           All
         </span>
         <span
           onClick={() => setFilter("Pending")}
-          name="Pending"
           style={{ color: filter === "Pending" ? "gold" : "white" }}
         >
           Pending
         </span>
         <span
           onClick={() => setFilter("Open")}
-          name="Open"
           style={{ color: filter === "Open" ? "gold" : "white" }}
         >
           Open
         </span>
         <span
           onClick={() => setFilter("Expire")}
-          name="Expire"
           style={{ color: filter === "Expire" ? "gold" : "white" }}
         >
           Expire
         </span>
         <span
           onClick={() => setFilter("Cancel")}
-          name="Cancel"
           style={{ color: filter === "Cancel" ? "gold" : "white" }}
         >
           Cancel
         </span>
         <span
           onClick={() => setFilter("Reject")}
-          name="Reject"
           style={{ color: filter === "Reject" ? "gold" : "white" }}
         >
           Reject
