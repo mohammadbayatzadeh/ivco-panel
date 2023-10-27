@@ -36,18 +36,9 @@
 .table {
   width: 100%;
 }
+
+.example,
 .headers {
-  width: 100%;
-  display: grid;
-  grid-template: 1fr / repeat(6, 1fr);
-  justify-items: center;
-  background-color: var(--neutral-grey5-50);
-  border-top-right-radius: 10px;
-  padding: 7px 0;
-  margin-top: 2px;
-  font-size: 0.8em;
-}
-.example {
   width: 100%;
   display: grid;
   grid-template: 1fr / repeat(6, 1fr);
@@ -57,10 +48,20 @@
   margin-top: 5px;
   font-size: 0.8em;
 }
+.headers {
+  background-color: var(--neutral-grey5-50);
+  border-top-right-radius: 10px;
+}
 
 @media (max-width: 500px) {
-  .headers,
-  .example ,.filter{
+  .container {
+    overflow-x: scroll;
+  }
+  .filter {
     font-size: 0.5em;
+  }
+  .headers,
+  .example {
+    width: 800px;
   }
 }
