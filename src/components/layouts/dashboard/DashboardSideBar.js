@@ -13,6 +13,7 @@ import { MdAirlineStops } from "react-icons/md";
 import { SlWallet, SlSupport } from "react-icons/sl";
 import { GiTakeMyMoney, GiPlagueDoctorProfile } from "react-icons/gi";
 import { PiSignOutBold } from "react-icons/pi";
+import {IoGitNetworkOutline} from 'react-icons/io5'
 
 function DashboardSideBar({ show }) {
   return (
@@ -51,6 +52,10 @@ function DashboardSideBar({ show }) {
         icon={<GiTakeMyMoney />}
         href="/dashboard/withdrawal"
       />
+      <DashboardItem
+        title="Genealogy"
+        icon={<IoGitNetworkOutline />}
+        href="/dashboard/genealogy"
       />
       <DashboardItem
         title="Support"
