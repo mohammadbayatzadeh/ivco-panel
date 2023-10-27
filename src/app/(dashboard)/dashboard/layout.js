@@ -8,7 +8,7 @@ import connectDB from "@/utils/connectDB";
 
 async function layout({ children }) {
   await connectDB();
-  const session = await getServerSession(authOptions);
+  const session = await getServerSession(authOptions);  
   !session && redirect("/login");
 
   return (

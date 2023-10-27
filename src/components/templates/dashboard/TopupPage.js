@@ -2,7 +2,7 @@
 import { useState } from "react";
 
 //styles
-import styles from "./CommissionsPage.module.css";
+import styles from "./Pages.module.css";
 
 function TopupPage() {
   const [filter, setFilter] = useState("All");

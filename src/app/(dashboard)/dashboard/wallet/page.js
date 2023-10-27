@@ -1,4 +1,4 @@
-//template
+//templates
 import WalletPage from "@/components/templates/dashboard/WalletPage";
 
 function page() {

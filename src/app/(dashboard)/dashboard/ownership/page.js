@@ -1,3 +1,4 @@
+//templates
 import OwnerShipPage from "@/components/templates/dashboard/OwnerShipPage";
 
 function page() {
