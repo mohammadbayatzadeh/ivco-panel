@@ -51,6 +51,7 @@ function DashboardSideBar({ show }) {
         icon={<GiTakeMyMoney />}
         href="/dashboard/withdrawal"
       />
+      />
       <DashboardItem
         title="Support"
         icon={<SlSupport />}
