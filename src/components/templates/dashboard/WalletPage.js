@@ -6,9 +6,12 @@ import styles from "./Pages.module.css";
 
 //components
 import Table from "@/components/modules/dashboard/Table";
+import Filter from "@/components/modules/dashboard/Filter";
 
 function WalletPage() {
   const [filter, setFilter] = useState("All");
+  const statuses = ["All", "Debtor", "Creditor"];
+
   const headers = [
     "ID",
     "title",
@@ -32,26 +35,8 @@ function WalletPage() {
     <div className={styles.container}>
       <h2>Wallet</h2>
       <p>In this section, you can see all your detail balance</p>
-      <div className={styles.filter}>
-        <span
-          onClick={() => setFilter("All")}
-          style={{ color: filter === "All" ? "gold" : "white" }}
-        >
-          All
-        </span>
-        <span
-          onClick={() => setFilter("Debtor")}
-          style={{ color: filter === "Debtor" ? "gold" : "white" }}
-        >
-          Debtor
-        </span>
-        <span
-          onClick={() => setFilter("Creditor")}
-          style={{ color: filter === "Creditor" ? "gold" : "white" }}
-        >
-          Creditor
-        </span>
-      </div>
+
+      <Filter statuses={statuses} filter={filter} setFilter={setFilter} />
       <Table example={example} headers={headers} />
     </div>
   );
