@@ -4,8 +4,29 @@ import { useState } from "react";
 //styles
 import styles from "./Pages.module.css";
 
+//components
+import Table from "@/components/modules/dashboard/Table";
+
 function WalletPage() {
   const [filter, setFilter] = useState("All");
+  const headers = [
+    "ID",
+    "title",
+    "Type",
+    "Creditor ($)",
+    "Debtor ($)",
+    "Created At",
+    "operation",
+  ];
+  const example = [
+    "id",
+    "Top up 5.86 $",
+    "debtor",
+    "25 $",
+    "0",
+    "2 june",
+    "none",
+  ];
 
   return (
     <div className={styles.container}>
@@ -31,24 +52,7 @@ function WalletPage() {
           Creditor
         </span>
       </div>
-      <div className={styles.table}>
-        <div className={styles.headers}>
-          <span>ID</span>
-          <span>Title</span>
-          <span>Type</span>
-          <span>Creditor($)</span>
-          <span>Created at</span>
-          <span>operation</span>
-        </div>
-        <div className={styles.example}>
-          <span>id</span>
-          <span>TopUp in the amount of $ 5</span>
-          <span>Point</span>
-          <span>2.00 </span>
-          <span>5 july</span>
-          <span>show</span>
-        </div>
-      </div>
+      <Table example={example} headers={headers} />
     </div>
   );
 }

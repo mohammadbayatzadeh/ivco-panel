@@ -4,8 +4,29 @@ import { useState } from "react";
 //styles
 import styles from "./Pages.module.css";
 
+//components
+import Table from "@/components/modules/dashboard/Table";
+
 function OwnerShipPage() {
   const [filter, setFilter] = useState("All");
+  const headers = [
+    "ID",
+    "Day",
+    "Total Pay (T)",
+    "Expiration",
+    "Status",
+    "Created At",
+    "Operation",
+  ];
+  const example = [
+    "id",
+    "5 june",
+    "6",
+    "7 September",
+    "Open",
+    "1 june",
+    "none",
+  ];
 
   return (
     <div className={styles.container}>
@@ -49,24 +70,7 @@ function OwnerShipPage() {
           Reject
         </span>
       </div>
-      <div className={styles.table}>
-        <div className={styles.headers}>
-          <span>ID</span>
-          <span>Day</span>
-          <span>Total pay (T)</span>
-          <span>Status</span>
-          <span>Created at</span>
-          <span>operation</span>
-        </div>
-        <div className={styles.example}>
-          <span>id</span>
-          <span>7 july</span>
-          <span>12 T</span>
-          <span>Paid</span>
-          <span>5 july</span>
-          <span>example</span>
-        </div>
-      </div>
+      <Table example={example} headers={headers} />
     </div>
   );
 }

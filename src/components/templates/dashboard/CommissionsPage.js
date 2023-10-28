@@ -4,8 +4,20 @@ import { useState } from "react";
 //styles
 import styles from "./Pages.module.css";
 
+//components
+import Table from "@/components/modules/dashboard/Table";
+
 function CommissionsPage() {
   const [filter, setFilter] = useState("All");
+  const headers = [
+    "C-ID",
+    "Day",
+    "Amount ($)",
+    "Status",
+    "Created At",
+    "Operation",
+  ];
+  const example = [];
 
   return (
     <div className={styles.container}>
@@ -34,24 +46,7 @@ function CommissionsPage() {
           Paid
         </span>
       </div>
-      <div className={styles.table}>
-        <div className={styles.headers}>
-          <span>C-ID</span>
-          <span>Day</span>
-          <span>Amount ($)</span>
-          <span>Status</span>
-          <span>Created at</span>
-          <span>operation</span>
-        </div>
-        <div className={styles.example}>
-          <span>id</span>
-          <span>7 july</span>
-          <span>20.00 $</span>
-          <span>Paid</span>
-          <span>5 july</span>
-          <span>example</span>
-        </div>
-      </div>
+      <Table example={example} headers={headers} />
     </div>
   );
 }

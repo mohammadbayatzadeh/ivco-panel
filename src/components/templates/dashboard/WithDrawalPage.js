@@ -1,10 +1,23 @@
 "use client";
 import { useState } from "react";
+
 //styles
 import styles from "./Pages.module.css";
 
+//components
+import Table from "@/components/modules/dashboard/Table";
+
 function WithDrawalPage() {
   const [filter, setFilter] = useState("All");
+  const headers = [
+    "C-ID",
+    "Day",
+    "Amount ($)",
+    "Status",
+    "Created At",
+    "Operation",
+  ];
+  const example = ["id", "5 june", "5.00 $", "Seccess", "2 june", "none"];
 
   return (
     <div className={styles.container}>
@@ -36,24 +49,7 @@ function WithDrawalPage() {
           Reject
         </span>
       </div>
-      <div className={styles.table}>
-        <div className={styles.headers}>
-          <span>W-ID</span>
-          <span>Amount</span>
-          <span>Stauts</span>
-          <span>Created at</span>
-          <span>Creditor</span>
-          <span>operation</span>
-        </div>
-        <div className={styles.example}>
-          <span>id</span>
-          <span>5.00 $</span>
-          <span>Success</span>
-          <span>5 july</span>
-          <span>Name</span>
-          <span>withdrawal</span>
-        </div>
-      </div>
+      <Table headers={headers} example={example} />
     </div>
   );
 }

@@ -1,0 +1,25 @@
+.container {
+  width: 100%;
+}
+
+.example,
+.headers {
+  width: 100%;
+  display: grid;
+  justify-items: center;
+  background-color: var(--neutral-grey5-100);
+  padding: 7px 0;
+  margin-top: 5px;
+  font-size: 0.8em;
+}
+.headers {
+  background-color: var(--neutral-grey5-50);
+  border-top-right-radius: 10px;
+}
+
+@media (max-width: 700px) {
+  .headers,
+  .example {
+    width: 800px;
+  }
+}
