@@ -9,7 +9,7 @@ function LandingNav() {
       <div className={styles.wrapper}>
         <svg>
           <text x="50%" y="50%" dy=".35em" textAnchor="middle">
-            Lorem ipsum
+            IVCO
           </text>
         </svg>
       </div>
