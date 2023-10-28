@@ -34,10 +34,7 @@ function OwnerShipPage() {
     <div className={styles.container}>
       <h2>Ownership Interest</h2>
       <p>In this section, you can see all your orders record</p>
-      <div className={styles.row}>
-        <Filter statuses={statuses} filter={filter} setFilter={setFilter} />
-        salam
-      </div>
+      <Filter statuses={statuses} filter={filter} setFilter={setFilter} />
       <Table example={example} headers={headers} />
     </div>
   );

@@ -76,11 +76,11 @@
 @keyframes anime {
   from {
     transform: translateX(0);
-    filter: drop-shadow(20px 10px 10px #4444dd);
+    filter: drop-shadow(20px 10px 10px #fff);
   }
   to {
     transform: translateX(10px);
-    filter: drop-shadow(4px 15px 10px #efe52d);
+    filter: drop-shadow(4px 15px 10px gold);
   }
 }
 
