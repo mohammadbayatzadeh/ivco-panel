@@ -30,6 +30,13 @@ function OwnerShipPage() {
     "1 june",
     "none",
   ];
+  const modalOptions = [
+    "3 month",
+    "6 month",
+    "9 month",
+    "12 month",
+    "36 month",
+  ];
 
   return (
     <div className={styles.container}>
@@ -37,7 +44,12 @@ function OwnerShipPage() {
       <p>In this section, you can see all your orders record</p>
       <div className={styles.row}>
         <Filter statuses={statuses} filter={filter} setFilter={setFilter} />
-        <Modal title="New order" />
+        <Modal
+          title="New order"
+          header="USA cue(Billiards)"
+          options={modalOptions}
+          inputs={["Amount", "Transaction ID"]}
+        />
       </div>
       <Table example={example} headers={headers} modal={true} />
     </div>
