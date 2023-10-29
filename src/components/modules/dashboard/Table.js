@@ -1,12 +1,15 @@
 //styles
 import styles from "./Table.module.css";
 
-function Table({ headers, example }) {
+function Table({ headers, example, modal = false }) {
   return (
     <div className={styles.container}>
       <div
         className={styles.headers}
-        style={{ gridTemplate: `1fr / repeat(${headers.length},1fr)` }}
+        style={{
+          gridTemplate: `1fr / repeat(${headers.length},1fr)`,
+          borderTopRightRadius: modal && 0,
+        }}
       >
         {headers.map((item, index) => (
           <span key={index}>{item}</span>

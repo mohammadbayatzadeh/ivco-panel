@@ -1,9 +1,24 @@
-import React from 'react'
+import React, { useState } from "react";
 
-function Modal() {
+//styles
+import styles from "./Modal.module.css";
+
+function Modal({ title }) {
+  const [modal, setModal] = useState(false);
   return (
-    <div>Modal</div>
-  )
+    <>
+      <span className={styles.button} onClick={() => setModal(true)}>
+        {title}
+      </span>
+      <div
+        className={
+          modal ? `${styles.layer} ${styles.layerActive}` : styles.layer
+        }
+      >
+        <div className={styles.modal}></div>
+      </div>
+    </>
+  );
 }
 
-export default Modal
+export default Modal;

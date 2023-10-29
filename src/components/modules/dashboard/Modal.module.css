@@ -1,0 +1,28 @@
+.button {
+  background-color: var(--neutral-grey5-50);
+  padding: 7px 15px;
+  font-size: 0.8em;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  cursor: pointer !important;
+  position: relative;
+}
+.layer {
+  background-color: var(--neutral-grey5-50);
+  width: 0;
+  height: 0;
+  top: 0;
+  right: 0;
+  backdrop-filter: blur(8px);
+  position: absolute;
+  transition: all 0.5s ease;
+}
+.layerActive {
+  width: 100vw;
+  height: 100vh;
+}
+.modal {
+  padding: 15px;
+  border-radius: 10px;
+  background-color: var(--neutral-grey5-100);
+}

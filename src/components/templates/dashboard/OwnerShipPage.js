@@ -7,6 +7,7 @@ import styles from "./Pages.module.css";
 //components
 import Table from "@/components/modules/dashboard/Table";
 import Filter from "@/components/modules/dashboard/Filter";
+import Modal from "@/components/modules/dashboard/Modal";
 
 function OwnerShipPage() {
   const [filter, setFilter] = useState("All");
@@ -34,8 +35,11 @@ function OwnerShipPage() {
     <div className={styles.container}>
       <h2>Ownership Interest</h2>
       <p>In this section, you can see all your orders record</p>
-      <Filter statuses={statuses} filter={filter} setFilter={setFilter} />
-      <Table example={example} headers={headers} />
+      <div className={styles.row}>
+        <Filter statuses={statuses} filter={filter} setFilter={setFilter} />
+        <Modal title="New order" />
+      </div>
+      <Table example={example} headers={headers} modal={true} />
     </div>
   );
 }
