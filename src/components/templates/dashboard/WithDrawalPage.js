@@ -7,6 +7,7 @@ import styles from "./Pages.module.css";
 //components
 import Table from "@/components/modules/dashboard/Table";
 import Filter from "@/components/modules/dashboard/Filter";
+import Modal from "@/components/modules/dashboard/Modal";
 
 function WithDrawalPage() {
   const [filter, setFilter] = useState("All");
@@ -26,8 +27,16 @@ function WithDrawalPage() {
     <div className={styles.container}>
       <h2>Withdrawal</h2>
       <p>In this section, you can see all your withdrawal request</p>
-      <Filter statuses={statuses} filter={filter} setFilter={setFilter} />
-      <Table headers={headers} example={example} />
+      <div className={styles.row}>
+        <Filter statuses={statuses} filter={filter} setFilter={setFilter} />
+        <Modal
+          title="New request"
+          header="Withdrawal Request"
+          inputs={["Amount $"]}
+          details={false}
+        />
+      </div>
+      <Table headers={headers} example={example} modal={true} />
     </div>
   );
 }

@@ -8,7 +8,7 @@ import { AiOutlineClose } from "react-icons/ai";
 import CopyToClipboard from "react-copy-to-clipboard";
 import { BiSolidCopy } from "react-icons/bi";
 
-function Modal({ title, header, options = [], inputs = [] }) {
+function Modal({ title, header, options = [], inputs = [], details = true }) {
   const [modal, setModal] = useState(false);
   const id = "adfafe7c-9a4c-42e7-bf21-259b5222cc9b";
 
@@ -47,14 +47,22 @@ function Modal({ title, header, options = [], inputs = [] }) {
             <input name={item} type="text" />
           </div>
         ))}
-
-        <CopyToClipboard text={id} onCopy={() => Toast("id copied", "info")}>
-          <div className={styles.id}>
-            <BiSolidCopy />
-            {id}
-          </div>
-        </CopyToClipboard>
-        <div className={styles.warning}>You just need to transfer Tether</div>
+        {details ? (
+          <>
+            <CopyToClipboard
+              text={id}
+              onCopy={() => Toast("id copied", "info")}
+            >
+              <div className={styles.id}>
+                <BiSolidCopy />
+                {id}
+              </div>
+            </CopyToClipboard>
+            <div className={styles.warning}>
+              You just need to transfer Tether
+            </div>
+          </>
+        ) : null}
         <button>Send Order</button>
       </div>
     </>
