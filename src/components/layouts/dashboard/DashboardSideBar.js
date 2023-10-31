@@ -13,7 +13,8 @@ import { MdAirlineStops } from "react-icons/md";
 import { SlWallet, SlSupport } from "react-icons/sl";
 import { GiTakeMyMoney, GiPlagueDoctorProfile } from "react-icons/gi";
 import { PiSignOutBold } from "react-icons/pi";
-import {IoGitNetworkOutline} from 'react-icons/io5'
+import { IoGitNetworkOutline } from "react-icons/io5";
+import { RiLockPasswordLine } from "react-icons/ri";
 
 function DashboardSideBar({ show }) {
   return (
@@ -66,6 +67,11 @@ function DashboardSideBar({ show }) {
         title="profile"
         icon={<GiPlagueDoctorProfile />}
         href="/dashboard/profile"
+      />
+      <DashboardItem
+        title="password"
+        icon={<RiLockPasswordLine />}
+        href="/dashboard/password"
       />
       <DashboardItem title="Log Out" icon={<PiSignOutBold />} signout={true} />
     </aside>
