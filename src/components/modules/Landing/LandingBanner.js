@@ -40,12 +40,14 @@ async function LandingBanner() {
         width={800}
         height={600}
         className={styles.purple}
+        alt="design"
       />
       <Image
         src="images/Graphic-Teal-Wave.svg"
         width={800}
         height={600}
         className={styles.teal}
+        alt="design"
       />
       <div className={styles.icons}>
         <CoinIcon

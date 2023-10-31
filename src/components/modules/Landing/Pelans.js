@@ -44,7 +44,7 @@ function Pelans() {
         />
         <Pelan
           title="winner Player"
-          image="/images/Graphic-execution.png"
+          image="/images/Graphic-Execution.png"
           tether="1000 "
           binary={20}
           referral={20}

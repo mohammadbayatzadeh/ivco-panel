@@ -14,6 +14,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" dir="ltr">
+      <link rel="manifest" href="/manifest.json" />
+      <link rel="apple-touch-icon" href="/next.svg" />
+      <meta name="theme-color" content="#000" />
       <NextAuthProvider>
         <Layout>
           <div className={Irancell.className}>{children}</div>
