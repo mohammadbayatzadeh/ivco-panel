@@ -6,7 +6,7 @@
   margin-bottom: 80px;
 }
 .intro {
-  margin-top: 20vw;
+  margin-top: 15vw;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -14,10 +14,10 @@
 }
 .intro h2 {
   font-size: 3em;
-  z-index: 1;
+  z-index: 2;
 }
 .intro p {
-  z-index: 1;
+  z-index: 2;
 }
 .buttons {
   display: flex;
@@ -32,7 +32,7 @@
   color: var(--primary-green-100);
   border: 2px solid var(--primary-green-100);
   cursor: pointer;
-  z-index: 1;
+  z-index: 2;
   transition: all 0.5s ease;
 }
 .intro a:first-child {
@@ -55,6 +55,13 @@
   color: #000;
   box-shadow: 1px 1px 10px 2px var(--primary-green-100);
 }
+.shadow {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  max-width: 100vw;
+}
 
 .teal,
 .purple,
@@ -63,24 +70,22 @@
   width: 100vw;
   min-width: 600px;
   height: 600px;
+  z-index: 1;
 }
 
 .purple {
   width: 120vw;
-
   top: 0;
   right: 0;
 }
 .blue {
   width: 60vw;
   min-width: 400px;
-
   top: 0;
   right: 0;
 }
 .teal {
   width: 90vw;
-
   top: 0;
   right: 0;
 }
