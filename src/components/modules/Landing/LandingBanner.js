@@ -43,6 +43,13 @@ async function LandingBanner() {
         alt="design"
       />
       <Image
+        src="/images/Graphic-Blue-Wave.png"
+        width={800}
+        height={600}
+        className={styles.blue}
+        alt="design"
+      />
+      <Image
         src="/images/Graphic-Teal-Wave.png"
         width={800}
         height={600}
