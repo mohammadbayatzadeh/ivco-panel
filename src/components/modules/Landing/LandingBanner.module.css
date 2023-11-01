@@ -2,11 +2,11 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
-  min-height: 70vh;
+  min-height: 600px;
   margin-bottom: 80px;
 }
 .intro {
-  margin-top: 15vw;
+  margin-top: 20vw;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -59,19 +59,20 @@
 .teal,
 .purple {
   position: absolute;
-  min-width: 100vw;
-  min-height: 100vh;
+  width: 100vw;
+  min-width: 600px;
+  height: 600px;
 
   animation: anime 2s linear alternate-reverse infinite;
 }
 
 .purple {
-  top: -10%;
-  right: -20%;
+  top: 0;
+  right: 0;
 }
 .teal {
-  top: -10%;
-  right: -20%;
+  top: 0;
+  right: 0;
 }
 @keyframes anime {
   from {
@@ -79,7 +80,7 @@
     filter: drop-shadow(20px 10px 10px #fff);
   }
   to {
-    transform: translateX(10px);
+    transform: translateX(-10px);
     filter: drop-shadow(4px 15px 10px gold);
   }
 }

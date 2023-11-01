@@ -36,14 +36,14 @@ async function LandingBanner() {
       </div>
 
       <Image
-        src="images/Graphic-Purple-Wave.svg"
+        src="/images/Graphic-Purple-Wave.png"
         width={800}
         height={600}
         className={styles.purple}
         alt="design"
       />
       <Image
-        src="images/Graphic-Teal-Wave.svg"
+        src="/images/Graphic-Teal-Wave.png"
         width={800}
         height={600}
         className={styles.teal}
