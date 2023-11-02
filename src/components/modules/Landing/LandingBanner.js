@@ -73,13 +73,13 @@ function LandingBanner() {
         <CoinIcon
           title="Tether TRC20"
           image="/images/TWT.svg"
-          x="30%"
+          x="15%"
           y={300}
         />
         <CoinIcon
           title="Urneal Engine"
           image="/images/icons8-unreal-engine.svg"
-          x="20%"
+          x="30%"
           y={450}
         />
       </div>
