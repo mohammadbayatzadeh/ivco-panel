@@ -24,7 +24,6 @@
   margin-top: 20px;
 }
 .intro a {
-  background: none;
   outline: none;
   margin-right: 20px;
   border-radius: 20px;
@@ -40,7 +39,12 @@
   color: #000;
 }
 .intro a:last-child {
+  backdrop-filter: blur(3px);
   animation: blink 1s linear infinite alternate-reverse;
+}
+.wait {
+  font-size: 1.2em;
+  color: var(--primary-green-100);
 }
 @keyframes blink {
   from {

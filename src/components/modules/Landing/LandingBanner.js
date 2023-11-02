@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -7,26 +8,24 @@ import styles from "./LandingBanner.module.css";
 
 //components
 import CoinIcon from "../../elements/Landing/items/CoinIcon";
-import connectDB from "@/utils/connectDB";
-import { getServerSession } from "next-auth";
-import { authOptions } from "@/app/api/auth/[...nextauth]/route";
-import { getNameFromEmail } from "@/utils/functions";
+import { useSession } from "next-auth/react";
+import { BeatLoader } from "react-spinners";
 
-async function LandingBanner() {
-  await connectDB();
-  const session = await getServerSession(authOptions);
-  const email = session?.user?.email;
+function LandingBanner() {
+  const { status } = useSession();
   return (
     <section className={styles.container}>
       <div className={styles.intro}>
         <h2>our credibility is your trust</h2>
         <p>International winners company</p>
         <div className={styles.buttons}>
-          {email ? (
-            <Link href="/dashboard">
-              Welcome Back {getNameFromEmail(email)}
-            </Link>
-          ) : (
+          {status === "loading" && (
+            <p className={styles.wait}>Please Wait ...</p>
+          )}
+          {status === "authenticated" && (
+            <Link href="/dashboard">Welcome Back</Link>
+          )}
+          {status === "unauthenticated" && (
             <>
               <Link href="/login">LOGIN</Link>
               <Link href="/signup">SIGNUP</Link>
