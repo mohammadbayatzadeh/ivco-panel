@@ -20,6 +20,7 @@ function PasswordPage() {
       !form.new_password
     ) {
       Toast("please enter all fields", "error");
+      return;
     }
     console.log(form);
   };
