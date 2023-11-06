@@ -1,0 +1,27 @@
+.container {
+  width: 100%;
+  background-color: var(--neutral-grey5-100);
+  padding: 15px;
+  border-radius: 10px;
+  margin: 15px 0;
+}
+.title {
+  border-bottom: 2px solid var(--dark-theme-body-background);
+}
+
+.container input {
+  width: 100%;
+  color: #fff;
+  background-color: var(--neutral-grey5-50);
+  outline: none;
+  border: 2px solid var(--gradient-green-color1);
+  padding: 7px 10px;
+  border-radius: 7px;
+}
+
+.container label {
+  color: var(--gradient-green-color1);
+  user-select: none;
+  margin-top: 10px;
+  display: block;
+}

@@ -18,8 +18,7 @@
 }
 
 @media (max-width: 700px) {
-  .headers,
-  .example {
+  .container {
     width: 800px;
   }
 }

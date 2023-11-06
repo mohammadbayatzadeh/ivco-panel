@@ -8,6 +8,9 @@ import { AiOutlineClose } from "react-icons/ai";
 import CopyToClipboard from "react-copy-to-clipboard";
 import { BiSolidCopy } from "react-icons/bi";
 
+//components
+import Toast from "@/components/elements/Toast";
+
 function Modal({ title, header, options = [], inputs = [], details = true }) {
   const [modal, setModal] = useState(false);
   const id = "adfafe7c-9a4c-42e7-bf21-259b5222cc9b";

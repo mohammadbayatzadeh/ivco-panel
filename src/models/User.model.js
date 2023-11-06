@@ -10,6 +10,10 @@ const userSchema = new Schema(
       type: String,
       required: true,
     },
+    prevPasswords: {
+      type: Array,
+      default: [],
+    },
   },
   { timestamps: true }
 );
