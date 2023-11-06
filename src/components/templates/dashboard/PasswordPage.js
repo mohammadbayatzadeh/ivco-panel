@@ -2,17 +2,22 @@
 import React, { useState } from "react";
 import styles from "./PasswordPage.module.css";
 import Toast from "@/components/elements/Toast";
+import axios from "axios";
+import { BeatLoader } from "react-spinners";
 
 function PasswordPage() {
+  const [loading, setLoading] = useState(false);
   const [form, setForm] = useState({
     current_password: "",
     new_password: "",
     confirm_new_password: "",
   });
+
   const changeHandler = (e) => {
     const { name, value } = e.target;
     setForm({ ...form, [name]: value });
   };
+
   const submitHandler = async () => {
     if (
       !form.confirm_new_password ||
@@ -22,7 +27,10 @@ function PasswordPage() {
       Toast("please enter all fields", "error");
       return;
     }
-    console.log(form);
+    setLoading(true);
+    const res = await axios.post("/api/auth/change", { body: form });
+    setLoading(false);
+    console.log(res.data);
   };
   return (
     <div className={styles.container}>
@@ -32,7 +40,7 @@ function PasswordPage() {
       <label>Current Password:</label>
       <input
         name="current_password"
-        type="text"
+        type="password"
         value={form.current_password}
         onChange={changeHandler}
       />
@@ -40,7 +48,7 @@ function PasswordPage() {
       <label>New Password:</label>
       <input
         name="new_password"
-        type="text"
+        type="password"
         value={form.new_password}
         onChange={changeHandler}
       />
@@ -48,11 +56,23 @@ function PasswordPage() {
       <label>Confirm New Password:</label>
       <input
         name="confirm_new_password"
-        type="text"
+        type="password"
         value={form.confirm_new_password}
         onChange={changeHandler}
       />
-      <button onClick={submitHandler}>submit</button>
+      <button onClick={submitHandler}>
+        {loading ? (
+          <BeatLoader
+            color="white"
+            loading={loading}
+            size={20}
+            aria-label="Loading Spinner"
+            data-testid="loader"
+          />
+        ) : (
+          "change"
+        )}
+      </button>
     </div>
   );
 }
