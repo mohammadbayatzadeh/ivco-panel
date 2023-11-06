@@ -25,3 +25,18 @@
   margin-top: 10px;
   display: block;
 }
+.container button {
+  width: 100%;
+  background-color: var(--primary-green-40);
+  padding: 10px;
+  border: none;
+  color: #fff;
+  margin-top: 10px;
+  font-size: 1.2em;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.container button:hover {
+  background-color: var(--primary-green-100);
+}
