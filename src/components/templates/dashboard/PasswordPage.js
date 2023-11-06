@@ -27,10 +27,18 @@ function PasswordPage() {
       Toast("please enter all fields", "error");
       return;
     }
+    if (form.confirm_new_password !== form.new_password) {
+      Toast("passwords not match", "error");
+      return;
+    }
     setLoading(true);
-    const res = await axios.post("/api/auth/change", { body: form });
-    setLoading(false);
-    console.log(res.data);
+    axios
+      .post("/api/auth/change", { body: form })
+      .then((res) => console.log(res.data))
+      .catch((err) => console.log(err.response.data))
+      .finally(() => {
+        setLoading(false);
+      });
   };
   return (
     <div className={styles.container}>

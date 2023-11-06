@@ -6,9 +6,9 @@ import User from "@/models/User.model";
 //functions
 import connectDB from "@/utils/connectDB";
 import { comparepasswords, hashPassword } from "@/utils/functions";
-import { getSession } from "next-auth/react";
 import { getServerSession } from "next-auth";
 import { authOptions } from "../[...nextauth]/route";
+import { compareSync } from "bcryptjs";
 
 export async function POST(req) {
   try {
@@ -34,9 +34,8 @@ export async function POST(req) {
         );
       }
     }
-    
-    const result = comparepasswords(user.password, current_password);
-    console.log(result);
+
+    const result = await comparepasswords(current_password, user.password);
     if (!result) {
       return NextResponse.json(
         {
@@ -46,18 +45,21 @@ export async function POST(req) {
       );
     }
 
-    // const { prevPasswords } = user;
-    // prevPasswords.map((pass) => {
-    //   const result = comparepasswords(pass, current_password);
-    //   if (result) {
-    //     return NextResponse.json(
-    //       {
-    //         message: "you choosed this password before",
-    //       },
-    //       { status: 400 }
-    //     );
-    //   }
-    // });
+    const { prevPasswords } = user;
+    const passCheck = prevPasswords.find((pass) =>
+      compareSync(new_password, pass)
+    );
+
+    if (passCheck) {
+      return NextResponse.json(
+        {
+          message: "choosed this password before",
+        },
+        { status: 400 }
+      );
+    }
+
+    const hash = hashPassword(new_password);
 
     return NextResponse.json(
       {
