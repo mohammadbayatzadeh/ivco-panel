@@ -60,10 +60,14 @@ export async function POST(req) {
     }
 
     const hash = hashPassword(new_password);
-
+    prevPasswords.push(hash);
+    console.log("first");
+    user.prevPasswords = prevPasswords;
+    user.password = hash;
+    await user.save();
     return NextResponse.json(
       {
-        message: "user",
+        message: "password changed",
       },
       { status: 200 }
     );

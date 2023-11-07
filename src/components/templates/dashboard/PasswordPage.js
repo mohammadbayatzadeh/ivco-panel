@@ -1,12 +1,18 @@
 "use client";
 import React, { useState } from "react";
-import styles from "./PasswordPage.module.css";
-import Toast from "@/components/elements/Toast";
 import axios from "axios";
+import { useRouter } from "next/navigation";
+
+//styles
+import styles from "./PasswordPage.module.css";
+
+//components
+import Toast from "@/components/elements/Toast";
 import { BeatLoader } from "react-spinners";
 
 function PasswordPage() {
   const [loading, setLoading] = useState(false);
+  const router = useRouter();
   const [form, setForm] = useState({
     current_password: "",
     new_password: "",
@@ -34,8 +40,13 @@ function PasswordPage() {
     setLoading(true);
     axios
       .post("/api/auth/change", { body: form })
-      .then((res) => console.log(res.data))
-      .catch((err) => console.log(err.response.data))
+      .then((res) => {
+        router.push("/dashboard");
+        Toast(res.data.message, "success");
+      })
+      .catch((err) => {
+        Toast(err.response.data.message, "error");
+      })
       .finally(() => {
         setLoading(false);
       });
