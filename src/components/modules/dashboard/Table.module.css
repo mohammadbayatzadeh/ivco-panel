@@ -12,6 +12,7 @@
   margin-top: 5px;
   font-size: 0.8em;
 }
+
 .headers {
   background-color: var(--neutral-grey5-50);
   border-top-right-radius: 10px;
@@ -19,6 +20,10 @@
 
 @media (max-width: 700px) {
   .container {
+    overflow-x: scroll;
+  }
+  .example,
+  .headers {
     width: 800px;
   }
 }
