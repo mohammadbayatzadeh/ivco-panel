@@ -27,9 +27,8 @@
   cursor: pointer !important;
   position: relative;
 }
-/* @media (max-width: 700px) {
-  .container {
-    overflow-x: scroll;
-    background-color: red;
+@media (max-width: 500px) {
+  .row a {
+    font-size: 0.5em;
   }
-} */
+}
