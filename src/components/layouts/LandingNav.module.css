@@ -92,6 +92,9 @@
 .checkbox {
   display: none;
 }
+.home {
+  display: none;
+}
 .checkbox:checked ~ .menu {
   transform: translateY(000px);
   top: 0;
@@ -134,6 +137,9 @@
     margin: 0 auto;
   }
   .hamburger {
+    display: flex;
+  }
+  .home {
     display: flex;
   }
 }

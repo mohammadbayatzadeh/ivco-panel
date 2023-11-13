@@ -5,7 +5,7 @@ import styles from "./LandingNav.module.css";
 
 function LandingNav() {
   return (
-    <nav className={styles.nav}>
+    <nav className={styles.nav} id="#">
       <div className={styles.wrapper}>
         <svg>
           <text x="50%" y="50%" dy=".35em" textAnchor="middle">
@@ -20,11 +20,11 @@ function LandingNav() {
         <span></span>
       </label>
       <ul className={styles.menu}>
-        <li>
-          <a href="#privacy">Privacy Policy</a>
+        <li className={styles.home}>
+          <a href="#">Home</a>
         </li>
         <li>
-          <a href="#about">About Us</a>
+          <a href="#app">Plans</a>
         </li>
         <li>
           <a href="#faq">FAQ</a>
@@ -33,7 +33,10 @@ function LandingNav() {
           <a href="#contact">Contact Us</a>
         </li>
         <li>
-          <a href="#app">App</a>
+          <a href="#about">About Us</a>
+        </li>
+        <li>
+          <a href="#privacy">Privacy Policy</a>
         </li>
       </ul>
     </nav>
