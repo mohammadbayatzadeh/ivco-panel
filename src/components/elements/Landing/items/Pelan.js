@@ -15,20 +15,13 @@ function Pelan({
   image,
   color,
 }) {
-  const shadowStyle = {
-    red: "redShadow",
-    blue: "blueShadow",
-    yellow: "yellowShadow",
-    green: "greenShadow",
-  };
-  const shadowColor = shadowStyle[color];
   return (
     <div className={styles.container}>
       <div className={styles.image}>
         <Image src={image} width={100} height={100} alt="pelans" />
       </div>
       <div className={styles.card}>
-        <span className={styles[shadowColor]}></span>
+        <span style={{ color }}></span>
         <p className={styles.title}>{title}</p>
         <p>
           {tether}

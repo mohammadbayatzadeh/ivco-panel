@@ -13,10 +13,10 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" dir="ltr">
+    <html lang="en" dir="ltr" className={Irancell.className}>
       <NextAuthProvider>
         <Layout>
-          <div className={Irancell.className}>{children}</div>
+          <div >{children}</div>
         </Layout>
       </NextAuthProvider>
     </html>

@@ -14,7 +14,7 @@ function ContactUs() {
   return (
     <div className={styles.container} id="contact">
       <h4>Contact Us</h4>
-      <form className={styles.form}>
+      <form className={styles.form} onSubmit={(e) => e.preventDefault()}>
         <label>Name:</label>
         <input
           name="name"

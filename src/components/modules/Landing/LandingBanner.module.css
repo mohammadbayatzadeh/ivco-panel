@@ -15,9 +15,11 @@
 .intro h2 {
   font-size: 3em;
   z-index: 2;
+  backdrop-filter: blur(1px);
 }
 .intro p {
   z-index: 2;
+  backdrop-filter: blur(1px);
 }
 .buttons {
   display: flex;

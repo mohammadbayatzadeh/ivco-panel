@@ -17,11 +17,13 @@
 }
 
 .answer {
-  padding: 7px 20px;
+  padding: 7px 25px;
   background-color: var(--neutral-grey5-50);
   border-bottom-right-radius: 7px;
   border-bottom-left-radius: 7px;
   font-size: 0.8em;
+  text-align: justify;
+  border-bottom: 2px solid var(--gradient-purple-color1);
 }
 
 @media (max-width: 600px) {

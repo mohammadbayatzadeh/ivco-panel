@@ -27,7 +27,7 @@ function Pelans() {
         <Pelan
           title="Strong Player"
           image="/images/Graphic-Pools.png"
-          color="green"
+          color="yellow"
           tether="200 "
           binary={20}
           referral={10}
@@ -37,7 +37,7 @@ function Pelans() {
         <Pelan
           title="Professional Player"
           image="/images/Graphic-Transactions.png"
-          color="yellow"
+          color="green"
           tether="500 "
           binary={20}
           referral={20}
