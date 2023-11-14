@@ -20,14 +20,25 @@
 .card span {
   position: absolute;
   transition: all 0.5s linear;
+  -webkit-box-shadow: 0px 0px 150px 50p currentColor;
+  box-shadow: 0px 0px 150px 50px currentColor;
 }
 .redShadow {
-  -webkit-box-shadow: 0px 0px 150px 50p var(--primary-red-100);
-  box-shadow: 0px 0px 150px 50px var(--primary-red-100);
+  color: var(--primary-red-100);
 }
+.greenShadow {
+  color: var(--primary-green-100);
+}
+.blueShadow {
+  color: var(--primary-blue-100);
+}
+.yellowShadow {
+  color: var(--primary-yellow-100);
+}
+
 .container:hover span {
-  -webkit-box-shadow: 0px 0px 200px 70px var(--primary-red-100);
-  box-shadow: 0px 0px 200px 80px var(--primary-red-100);
+  -webkit-box-shadow: 0px 0px 200px 70px currentColor;
+  box-shadow: 0px 0px 200px 80px currentColor;
 }
 .container p {
   font-size: 0.8em;
