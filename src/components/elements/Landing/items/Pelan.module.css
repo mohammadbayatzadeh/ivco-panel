@@ -19,9 +19,11 @@
 }
 .card span {
   position: absolute;
+  transition: all 0.5s linear;
+}
+.redShadow {
   -webkit-box-shadow: 0px 0px 150px 50p var(--primary-red-100);
   box-shadow: 0px 0px 150px 50px var(--primary-red-100);
-  transition: all 0.5s linear;
 }
 .container:hover span {
   -webkit-box-shadow: 0px 0px 200px 70px var(--primary-red-100);
