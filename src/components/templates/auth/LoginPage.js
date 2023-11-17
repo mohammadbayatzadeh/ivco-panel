@@ -4,13 +4,13 @@ import Toast from "../../elements/Toast";
 import Link from "next/link";
 import { signIn } from "next-auth/react";
 import BeatLoader from "react-spinners/BeatLoader";
+import { useRouter } from "next/navigation";
 
 //styles
 import styles from "./AuthPage.module.css";
 
 //icons
 import { BiHomeSmile } from "react-icons/bi";
-import { useRouter } from "next/navigation";
 
 function LoginPage() {
   const [form, setForm] = useState({ email: "", password: "" });

@@ -15,6 +15,7 @@ import { GiTakeMyMoney, GiPlagueDoctorProfile } from "react-icons/gi";
 import { PiSignOutBold } from "react-icons/pi";
 import { IoGitNetworkOutline } from "react-icons/io5";
 import { RiLockPasswordLine } from "react-icons/ri";
+import { BiHomeSmile } from "react-icons/bi";
 
 function DashboardSideBar({ show }) {
   return (
@@ -23,6 +24,11 @@ function DashboardSideBar({ show }) {
         show ? `${styles.container} ${styles.active}` : styles.container
       }
     >
+      <DashboardItem
+        title="Home"
+        icon={<BiHomeSmile />}
+        href="/"
+      />
       <DashboardItem
         title="Dashboard"
         icon={<RxDashboard />}
