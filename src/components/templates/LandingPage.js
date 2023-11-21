@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, { useEffect, useState } from "react";
 
 //styles
 import styles from "./LandingPage.module.css";
@@ -18,20 +20,35 @@ import Privacy from "../modules/Landing/Privacy";
 import Footer from "../modules/Landing/Footer";
 
 function LandingPage() {
+  const [float, setFloat] = useState(false);
+  useEffect(() => {
+    window.onscroll = () => {
+      if (+window.innerHeight < +scrollY) {
+        setFloat(true);
+        console.log(window.innerHeight);
+        console.log(scrollY);
+      } else {
+        setFloat(false);
+      }
+    };
+  }, []);
+
   return (
     <div className={styles.body}>
-      <div className={styles.container}>
-        <LandingNav />
-        <LandingBanner />
-        <Pelans />
-        <Features />
-        <FAQs />
-        <ContactUs />
-        <AboutUs />
-        <Supporters />
-        <Privacy />
-        <Footer />
-      </div>
+      <scroll>
+        <div className={styles.container}>
+          <LandingNav />
+          <LandingBanner />
+          <Pelans />
+          <Features />
+          <FAQs />
+          <ContactUs />
+          <AboutUs />
+          <Supporters />
+          <Privacy />
+          <Footer />
+        </div>
+      </scroll>
     </div>
   );
 }
