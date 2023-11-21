@@ -18,6 +18,7 @@ import AboutUs from "../modules/Landing/AboutUs";
 import Supporters from "../modules/Landing/Supporters";
 import Privacy from "../modules/Landing/Privacy";
 import Footer from "../modules/Landing/Footer";
+import FloatButton from "../elements/Landing/Features/FloatButton";
 
 function LandingPage() {
   const [float, setFloat] = useState(false);
@@ -25,8 +26,6 @@ function LandingPage() {
     window.onscroll = () => {
       if (+window.innerHeight < +scrollY) {
         setFloat(true);
-        console.log(window.innerHeight);
-        console.log(scrollY);
       } else {
         setFloat(false);
       }
@@ -36,6 +35,7 @@ function LandingPage() {
   return (
     <div className={styles.body}>
       <scroll>
+        <FloatButton show={float} />
         <div className={styles.container}>
           <LandingNav />
           <LandingBanner />
