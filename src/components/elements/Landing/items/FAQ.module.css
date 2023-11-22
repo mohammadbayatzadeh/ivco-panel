@@ -12,12 +12,23 @@
   width: 100%;
 }
 .question {
-  padding: 7px 10px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   background-color: var(--gradient-purple-color1);
   border-top-right-radius: 7px;
   border-top-left-radius: 7px;
+  padding: 7px 10px;
 }
 
+.question svg {
+  font-size: 1.5em;
+  color: var(--background-blueblack);
+  transform: rotate(70deg);
+  transition: 0.5s all ease;
+  cursor: pointer;
+}
 .answer {
   height: 0;
   overflow: hidden;
