@@ -1,0 +1,16 @@
+.item {
+  font-size: 1.2em;
+  list-style: none;
+  margin: 0 15px;
+  z-index: 2;
+  transition: all 0.5s ease;
+}
+.item:hover {
+  color: var(--primary-green-100);
+}
+
+@media (max-width: 900px) {
+  .item {
+    margin: 0 auto;
+  }
+}
