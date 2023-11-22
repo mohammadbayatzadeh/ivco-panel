@@ -5,7 +5,9 @@
   align-items: flex-start;
   justify-content: flex-start;
   margin: 15px 0;
+  transition: 0.5s all ease;
 }
+
 .container p {
   width: 100%;
 }
@@ -17,13 +19,20 @@
 }
 
 .answer {
-  padding: 7px 25px;
+  height: 0;
+  overflow: hidden;
+  padding: 0px 25px;
   background-color: var(--neutral-grey5-50);
   border-bottom-right-radius: 7px;
   border-bottom-left-radius: 7px;
   font-size: 0.8em;
   text-align: justify;
   border-bottom: 2px solid var(--gradient-purple-color1);
+  transition: all 0.5s ease;
+}
+.answer.active {
+  padding: 7px 25px;
+  height: auto;
 }
 
 @media (max-width: 600px) {
@@ -34,6 +43,6 @@
     font-size: 0.8em;
   }
   .answer {
-    font-size: .7em;
+    font-size: 0.7em;
   }
 }
