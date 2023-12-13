@@ -23,7 +23,8 @@
   margin-right: 10px;
 }
 
-.input input {
+.input input,
+.balance input {
   width: 100%;
   color: #fff;
   background-color: var(--neutral-grey5-50);
@@ -33,7 +34,17 @@
   border-radius: 7px;
 }
 
-.input label {
+.balance {
+  height: 0;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+.balance.active {
+  height: auto;
+}
+
+.input label,
+.balance label {
   color: var(--gradient-green-color1);
   user-select: none;
   margin-top: 10px;

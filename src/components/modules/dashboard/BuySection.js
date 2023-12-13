@@ -6,11 +6,13 @@ import GradientBorder from "@/components/elements/GradientBorder";
 import { BiSolidCopy } from "react-icons/bi";
 import CopyToClipboard from "react-copy-to-clipboard";
 import Toast from "@/components/elements/Toast";
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 function BuySection() {
   const id = "adfafe7c-9a4c-42e7-bf21-259b5222cc9b";
   const [value, setValue] = useState("Direct");
+  const contentEl = useRef();
+
   return (
     <GradientBorder>
       <div className={styles.container}>
@@ -41,12 +43,22 @@ function BuySection() {
           <label>Number:</label>
           <input name="number" type="text" />
         </div>
-        {value === "Direct" ? (
-          <div className={styles.input}>
-            <label>Trasnaction ID:</label>
-            <input name="number" type="text" />
-          </div>
-        ) : null}
+        <div
+          className={
+            value === "Balance"
+              ? ` ${styles.balance} ${styles.active}`
+              : styles.balance
+          }
+          style={
+            value === "Balance"
+              ? { height: contentEl.current.scrollHeight }
+              : { height: "0px" }
+          }
+          ref={contentEl}
+        >
+          <label>Trasnaction ID:</label>
+          <input name="number" type="text" />
+        </div>
 
         <CopyToClipboard text={id} onCopy={() => Toast("id copied", "info")}>
           <div className={styles.id}>
