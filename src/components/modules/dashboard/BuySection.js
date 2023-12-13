@@ -24,10 +24,10 @@ function BuySection() {
             id="customRadio1"
             name="customRadio"
             value="Direct"
+            defaultChecked
             onChange={(e) => setValue(e.target.value)}
           />
           <label htmlFor="customRadio1">Direct</label>
-
           <input
             type="radio"
             id="customRadio2"
