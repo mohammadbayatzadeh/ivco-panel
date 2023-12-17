@@ -9,10 +9,11 @@ import styles from "./LandingBanner.module.css";
 //components
 import CoinIcon from "../../elements/Landing/items/CoinIcon";
 import { useSession } from "next-auth/react";
-import { BeatLoader } from "react-spinners";
+import { headers } from "../../../../next.config";
+import { getNameFromEmail } from "@/utils/functions";
 
 function LandingBanner() {
-  const { status } = useSession();
+  const { status, data } = useSession();
   return (
     <section className={styles.container}>
       <div className={styles.intro}>
@@ -23,7 +24,9 @@ function LandingBanner() {
             <p className={styles.wait}>Please Wait ...</p>
           )}
           {status === "authenticated" && (
-            <Link href="/dashboard">Welcome Back</Link>
+            <Link href="/dashboard">
+              Welcome Back {getNameFromEmail(data?.user?.email)}
+            </Link>
           )}
           {status === "unauthenticated" && (
             <>
