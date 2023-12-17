@@ -17,7 +17,7 @@ function Pelans() {
         <Pelan
           title="Player"
           image="/images/Graphic-Leverage.png"
-          color="red"
+          color="#ff496a"
           tether="50 "
           binary={20}
           referral={10}
@@ -27,7 +27,7 @@ function Pelans() {
         <Pelan
           title="Strong Player"
           image="/images/Graphic-Pools.png"
-          color="yellow"
+          color="#f1ff34"
           tether="200 "
           binary={20}
           referral={10}
@@ -37,7 +37,7 @@ function Pelans() {
         <Pelan
           title="Professional Player"
           image="/images/Graphic-Transactions.png"
-          color="green"
+          color="rgb(41, 255, 155)"
           tether="500 "
           binary={20}
           referral={20}
@@ -48,7 +48,7 @@ function Pelans() {
         <Pelan
           title="winner Player"
           image="/images/Graphic-Execution.png"
-          color="blue"
+          color="#0a84ff"
           tether="1000 "
           binary={20}
           referral={20}
