@@ -1,9 +1,12 @@
 import React from "react";
+
+//styles
 import styles from "./TextInput.module.css";
 
 function TextInput({ form, setForm, name, label, type, textarea = false }) {
   const styleTypes = {
     contact: "contactInput",
+    auth:'authInput'
   };
   const changeHandler = (e) => {
     const { name, value } = e.target;
