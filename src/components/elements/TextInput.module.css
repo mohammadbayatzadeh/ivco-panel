@@ -1,0 +1,17 @@
+
+.contactInput input,
+.contactInput textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  outline: none;
+  margin-bottom: 20px;
+  background-color: var(--neutral-grey5-50);
+  color: #fff;
+  border: 2px solid var(--background-blueblack);
+  transition: all 0.5s ease;
+  resize: none;
+}
+.contactInput input:focus {
+  border: 2px solid var(--primary-blue-100);
+}

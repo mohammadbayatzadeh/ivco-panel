@@ -18,21 +18,36 @@ function ContactUs() {
     <div className={styles.container} id="contact">
       <h4>Contact Us</h4>
       <form className={styles.form} onSubmit={(e) => e.preventDefault()}>
-        <TextInput form={form} setForm={setForm} name="name" label="Name" />
-        <TextInput form={form} setForm={setForm} name="email" label="Email" />
+        <TextInput
+          form={form}
+          setForm={setForm}
+          name="name"
+          label="Name"
+          type="contact"
+        />
+        <TextInput
+          form={form}
+          setForm={setForm}
+          name="email"
+          label="Email"
+          type="contact"
+        />
         <TextInput
           form={form}
           setForm={setForm}
           name="subject"
           label="Subject"
+          type="contact"
         />
         <TextInput
           form={form}
           setForm={setForm}
           name="enquiry"
           label="Enquiry"
+          type="contact"
+          textarea={true}
         />
-        <button>Submit</button>
+        <button type="submit">Submit</button>
       </form>
     </div>
   );
