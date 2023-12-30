@@ -18,7 +18,12 @@ function TextInput({ form, setForm, name, label, type, textarea = false }) {
       {textarea ? (
         <textarea name={name} value={form[name]} onChange={changeHandler} />
       ) : (
-        <input name={name} value={form[name]} onChange={changeHandler} />
+        <input
+          name={name}
+          value={form[name]}
+          onChange={changeHandler}
+          type={name}
+        />
       )}
     </div>
   );
