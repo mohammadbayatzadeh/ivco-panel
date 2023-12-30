@@ -3,12 +3,13 @@ import React, { useState } from "react";
 import axios from "axios";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import BeatLoader from "react-spinners/BeatLoader";
 
 //styles
 import styles from "./AuthPage.module.css";
 
 //components
+import BeatLoader from "react-spinners/BeatLoader";
+import TextInput from "@/components/elements/Textinput";
 import Toast from "../../elements/Toast";
 
 //icons
@@ -18,11 +19,6 @@ function RegisterPage() {
   const [form, setForm] = useState({ email: "", password: "" });
   const [loading, setLoading] = useState(false);
   const router = useRouter();
-
-  const changeHandler = (e) => {
-    const { value, name } = e.target;
-    setForm({ ...form, [name]: value });
-  };
 
   const submitHandler = async (e) => {
     e.preventDefault();
@@ -44,24 +40,24 @@ function RegisterPage() {
       <Link href="/" className={styles.home}>
         <BiHomeSmile />
       </Link>
-      <form className={styles.form}>
+      <form className={styles.form} onSubmit={submitHandler}>
         <h3>Register Form</h3>
         <p>Make your app management easy and fun!</p>
-        <label>Email:</label>
-        <input
-          value={form.email}
-          onChange={changeHandler}
+        <TextInput
+          form={form}
+          setForm={setForm}
           name="email"
-          type="email"
+          label="Email"
+          type="auth"
         />
-        <label>Password:</label>
-        <input
-          value={form.password}
-          onChange={changeHandler}
+        <TextInput
+          form={form}
+          setForm={setForm}
           name="password"
-          type="password"
+          label="Password"
+          type="auth"
         />
-        <button onClick={submitHandler}>
+        <button type="submit">
           {loading ? (
             <BeatLoader
               color="white"
