@@ -9,6 +9,7 @@ import styles from "./PasswordPage.module.css";
 //components
 import Toast from "@/components/elements/Toast";
 import { BeatLoader } from "react-spinners";
+import TextInput from "@/components/elements/Textinput";
 
 function PasswordPage() {
   const [loading, setLoading] = useState(false);
@@ -18,11 +19,6 @@ function PasswordPage() {
     new_password: "",
     confirm_new_password: "",
   });
-
-  const changeHandler = (e) => {
-    const { name, value } = e.target;
-    setForm({ ...form, [name]: value });
-  };
 
   const submitHandler = async () => {
     if (
@@ -55,30 +51,28 @@ function PasswordPage() {
     <div className={styles.container}>
       <h2>Change Password</h2>
       <p>change your account password</p>
-
-      <label>Current Password:</label>
-      <input
+      <TextInput
+        form={form}
+        setForm={setForm}
+        type="password"
         name="current_password"
-        type="password"
-        value={form.current_password}
-        onChange={changeHandler}
+        label="Current password"
       />
-
-      <label>New Password:</label>
-      <input
+      <TextInput
+        form={form}
+        setForm={setForm}
+        type="password"
         name="new_password"
+        label="New password"
+      />
+      <TextInput
+        form={form}
+        setForm={setForm}
         type="password"
-        value={form.new_password}
-        onChange={changeHandler}
+        name="confirm_new_password"
+        label="Confirm new password"
       />
 
-      <label>Confirm New Password:</label>
-      <input
-        name="confirm_new_password"
-        type="password"
-        value={form.confirm_new_password}
-        onChange={changeHandler}
-      />
       <button onClick={submitHandler}>
         {loading ? (
           <BeatLoader

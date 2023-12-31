@@ -17,6 +17,7 @@ function TextInput({
     auth: "authInput",
     dashboard: "dashInput",
     ticket: "ticketInput",
+    password: "passInput",
   };
   const changeHandler = (e) => {
     const { name, value } = e.target;
@@ -30,8 +31,8 @@ function TextInput({
           name={name}
           value={form[name]}
           onChange={changeHandler}
-          type={name}
-          placeholder={placeholder && label}
+          type={label.includes("password") ? "password" : name}
+          placeholder={placeholder ? label : null}
         />
       ) : (
         <input

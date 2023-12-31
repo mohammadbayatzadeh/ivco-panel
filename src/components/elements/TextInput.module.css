@@ -25,7 +25,8 @@
 }
 
 .authInput label,
-.dashInput label {
+.dashInput label,
+.passInput label {
   color: var(--gradient-green-color1);
   user-select: none;
   margin-top: 10px;
@@ -55,4 +56,13 @@
 }
 .ticketInput textarea {
   height: 200px;
+}
+.passInput input {
+  width: 100%;
+  color: #fff;
+  background-color: var(--neutral-grey5-50);
+  outline: none;
+  border: 2px solid var(--gradient-green-color1);
+  padding: 7px 10px;
+  border-radius: 7px;
 }
