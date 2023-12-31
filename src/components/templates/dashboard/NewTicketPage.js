@@ -1,37 +1,43 @@
 "use client";
 import { useState } from "react";
+
+//styles
 import styles from "./NewTicketPage.module.css";
+
+//elements
+import TextInput from "@/components/elements/Textinput";
 
 function NewTicketPage() {
   const [form, setForm] = useState({
     title: "",
     description: "",
   });
+
   const submitHandler = (e) => {
     e.preventDefault();
     console.log(form);
   };
-  const changeHandler = (e) => {
-    const { name, value } = e.target;
-    setForm({ ...form, [name]: value });
-  };
+
   return (
     <div className={styles.container}>
       <h2>Tickets</h2>
       <p>Create new ticket</p>
       <form className={styles.form} onSubmit={submitHandler}>
-        <label>Title</label>
-        <input
-          type="text"
-          value={form.title}
-          onChange={changeHandler}
+        <TextInput
+          form={form}
+          setForm={setForm}
           name="title"
+          label="Title"
+          type="ticket"
         />
-        <textarea
-          placeholder="Enter the text here"
-          value={form.description}
-          onChange={changeHandler}
+        <TextInput
+          form={form}
+          setForm={setForm}
+          type="ticket"
           name="description"
+          label="Please enter your text here"
+          textarea={true}
+          placeholder={true}
         />
         <button type="submit" className={styles.button}>
           Submit

@@ -1,8 +1,4 @@
 .container {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
   width: 100%;
   padding: 20px;
 }
@@ -20,20 +16,6 @@
   background-color: var(--neutral-grey5-50);
   display: flex;
   flex-direction: column;
-}
-.form input,
-.form textarea {
-  background-color: var(--neutral-grey3-100);
-  padding: 10px;
-  border-radius: 10px;
-  border: none;
-  color: #fff;
-  font-size: 1.1em;
-  resize: none;
-  margin-bottom: 20px;
-}
-.form textarea {
-  height: 200px;
 }
 
 .button {

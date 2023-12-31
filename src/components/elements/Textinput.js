@@ -3,11 +3,20 @@ import React from "react";
 //styles
 import styles from "./TextInput.module.css";
 
-function TextInput({ form, setForm, name, label, type, textarea = false }) {
+function TextInput({
+  form,
+  setForm,
+  name,
+  label,
+  type,
+  textarea = false,
+  placeholder = false,
+}) {
   const styleTypes = {
     contact: "contactInput",
     auth: "authInput",
     dashboard: "dashInput",
+    ticket: "ticketInput",
   };
   const changeHandler = (e) => {
     const { name, value } = e.target;
@@ -15,9 +24,15 @@ function TextInput({ form, setForm, name, label, type, textarea = false }) {
   };
   return (
     <div className={styles[styleTypes[type]]} style={{ width: "100%" }}>
-      <label>{label}:</label>
+      {!placeholder && <label>{label}:</label>}
       {textarea ? (
-        <textarea name={name} value={form[name]} onChange={changeHandler} />
+        <textarea
+          name={name}
+          value={form[name]}
+          onChange={changeHandler}
+          type={name}
+          placeholder={placeholder && label}
+        />
       ) : (
         <input
           name={name}

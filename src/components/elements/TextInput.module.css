@@ -40,3 +40,19 @@
   padding: 7px 10px;
   border-radius: 7px;
 }
+.ticketInput input,
+.ticketInput textarea {
+  width: 100%;
+
+  background-color: var(--neutral-grey3-100);
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  color: #fff;
+  font-size: 1.1em;
+  resize: none;
+  margin-bottom: 20px;
+}
+.ticketInput textarea {
+  height: 200px;
+}
