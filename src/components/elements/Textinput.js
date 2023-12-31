@@ -7,6 +7,7 @@ function TextInput({ form, setForm, name, label, type, textarea = false }) {
   const styleTypes = {
     contact: "contactInput",
     auth: "authInput",
+    dashboard: "dashInput",
   };
   const changeHandler = (e) => {
     const { name, value } = e.target;

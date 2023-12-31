@@ -1,15 +1,24 @@
 "use client";
+import { useRef, useState } from "react";
+import CopyToClipboard from "react-copy-to-clipboard";
 
 //styles
 import styles from "./BuySection.module.css";
+
+//elements
 import GradientBorder from "@/components/elements/GradientBorder";
-import { BiSolidCopy } from "react-icons/bi";
-import CopyToClipboard from "react-copy-to-clipboard";
 import Toast from "@/components/elements/Toast";
-import { useRef, useState } from "react";
+
+//icons
+import { BiSolidCopy } from "react-icons/bi";
+import TextInput from "@/components/elements/Textinput";
 
 function BuySection() {
   const id = "adfafe7c-9a4c-42e7-bf21-259b5222cc9b";
+  const [form, setForm] = useState({
+    number: "",
+    trasnaction: "",
+  });
   const [value, setValue] = useState("Direct");
   const contentEl = useRef();
 
@@ -39,10 +48,13 @@ function BuySection() {
           />
           <label htmlFor="customRadio2">Balance</label>
         </div>
-        <div className={styles.input}>
-          <label>Number:</label>
-          <input name="number" type="text" />
-        </div>
+        <TextInput
+          form={form}
+          setForm={setForm}
+          name="number"
+          label="Number"
+          type="dashboard"
+        />
         <div
           className={
             value === "Balance"
@@ -56,8 +68,13 @@ function BuySection() {
           }
           ref={contentEl}
         >
-          <label>Trasnaction ID:</label>
-          <input name="number" type="text" />
+          <TextInput
+            form={form}
+            setForm={setForm}
+            name="trasnaction"
+            label="Trasnaction ID"
+            type="dashboard"
+          />
         </div>
 
         <CopyToClipboard text={id} onCopy={() => Toast("id copied", "info")}>
