@@ -31,7 +31,6 @@ function TextInput({
           name={name}
           value={form[name]}
           onChange={changeHandler}
-          type={label.includes("password") ? "password" : name}
           placeholder={placeholder ? label : null}
         />
       ) : (
@@ -39,7 +38,7 @@ function TextInput({
           name={name}
           value={form[name]}
           onChange={changeHandler}
-          type={name}
+          type={label.includes("password") ? "password" : name}
         />
       )}
     </div>
