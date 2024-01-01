@@ -18,7 +18,8 @@
 .passInput input,
 .modalInput input,
 .dashInput input,
-.authInput input {
+.authInput input,
+.profileInput input {
   width: 100%;
   color: #fff;
   background-color: var(--neutral-grey5-50);
@@ -31,7 +32,8 @@
 .authInput label,
 .dashInput label,
 .passInput label,
-.modalInput label {
+.modalInput label,
+.profileInput label {
   color: var(--gradient-green-color1);
   user-select: none;
   margin-top: 10px;

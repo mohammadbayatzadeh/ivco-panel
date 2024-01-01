@@ -1,19 +1,26 @@
 "use client";
 import React, { useState } from "react";
+
+//styles
 import styles from "./InputBox.module.css";
 
+//elements
+import TextInput from "../Textinput";
+
 function InputBox({ title, label, value }) {
-  const [val, setVal] = useState(value);
+  const [form, setForm] = useState({
+    [label]: value,
+  });
   return (
     <div className={styles.container}>
       <p className={styles.title}>{title}</p>
       <div className={styles.input}>
-        <label>{label}:</label>
-        <input
+        <TextInput
+          form={form}
+          setForm={setForm}
           name={label}
-          type="text"
-          value={val}
-          onChange={(e) => setVal(e.target.value)}
+          label={label}
+          type="profile"
         />
         <button>submit</button>
       </div>

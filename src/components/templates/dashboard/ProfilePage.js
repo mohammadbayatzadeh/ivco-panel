@@ -1,10 +1,16 @@
 import React from "react";
-import styles from "./Pages.module.css";
-import InputBox from "@/components/elements/dashboard/InputBox";
-import connectDB from "@/utils/connectDB";
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 import { redirect } from "next/navigation";
+
+//styles
+import styles from "./Pages.module.css";
+
+//elements
+import InputBox from "@/components/elements/dashboard/InputBox";
+
+//functions
+import connectDB from "@/utils/connectDB";
 import { getNameFromEmail } from "@/utils/functions";
 
 async function ProfilePage() {

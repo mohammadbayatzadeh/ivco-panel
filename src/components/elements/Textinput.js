@@ -18,7 +18,8 @@ function TextInput({
     dashboard: "dashInput",
     ticket: "ticketInput",
     password: "passInput",
-    modal:"modalInput"
+    modal: "modalInput",
+    profile: "profileInput",
   };
   const changeHandler = (e) => {
     const { name, value } = e.target;
