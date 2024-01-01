@@ -15,13 +15,7 @@ function InputBox({ title, label, value }) {
     <div className={styles.container}>
       <p className={styles.title}>{title}</p>
       <div className={styles.input}>
-        <TextInput
-          form={form}
-          setForm={setForm}
-          name={label}
-          label={label}
-          type="profile"
-        />
+        <TextInput form={form} setForm={setForm} name={label} label={label} />
         <button>submit</button>
       </div>
     </div>

@@ -54,13 +54,7 @@ function Modal({ title, header, options = [], inputs = [], details = true }) {
         ) : null}
         {inputs.map((item, index) => (
           <div className={styles.input} key={index}>
-            <TextInput
-              form={form}
-              setForm={setForm}
-              name={item}
-              label={item}
-              type="modal"
-            />
+            <TextInput form={form} setForm={setForm} name={item} label={item} />
           </div>
         ))}
         {details ? (

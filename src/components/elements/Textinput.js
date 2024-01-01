@@ -8,18 +8,14 @@ function TextInput({
   setForm,
   name,
   label,
-  type,
+  type = "dashboard",
   textarea = false,
   placeholder = false,
 }) {
   const styleTypes = {
     contact: "contactInput",
-    auth: "authInput",
     dashboard: "dashInput",
     ticket: "ticketInput",
-    password: "passInput",
-    modal: "modalInput",
-    profile: "profileInput",
   };
   const changeHandler = (e) => {
     const { name, value } = e.target;

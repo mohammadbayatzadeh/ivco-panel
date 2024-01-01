@@ -15,11 +15,7 @@
   border: 2px solid var(--primary-blue-100);
 }
 
-.passInput input,
-.modalInput input,
-.dashInput input,
-.authInput input,
-.profileInput input {
+.dashInput input {
   width: 100%;
   color: #fff;
   background-color: var(--neutral-grey5-50);
@@ -29,11 +25,7 @@
   border-radius: 7px;
 }
 
-.authInput label,
-.dashInput label,
-.passInput label,
-.modalInput label,
-.profileInput label {
+.dashInput label {
   color: var(--gradient-green-color1);
   user-select: none;
   margin-top: 10px;

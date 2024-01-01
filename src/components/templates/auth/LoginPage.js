@@ -44,19 +44,12 @@ function LoginPage() {
       <form className={styles.form} onSubmit={submitHandler}>
         <h3>Login Form</h3>
         <p>Please sign-in to your account</p>
-        <TextInput
-          form={form}
-          setForm={setForm}
-          name="email"
-          label="Email"
-          type="auth"
-        />
+        <TextInput form={form} setForm={setForm} name="email" label="Email" />
         <TextInput
           form={form}
           setForm={setForm}
           name="password"
           label="Password"
-          type="auth"
         />
 
         <button type="submit">

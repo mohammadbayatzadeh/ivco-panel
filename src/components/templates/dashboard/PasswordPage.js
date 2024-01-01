@@ -54,21 +54,18 @@ function PasswordPage() {
       <TextInput
         form={form}
         setForm={setForm}
-        type="password"
         name="current_password"
         label="Current password"
       />
       <TextInput
         form={form}
         setForm={setForm}
-        type="password"
         name="new_password"
         label="New password"
       />
       <TextInput
         form={form}
         setForm={setForm}
-        type="password"
         name="confirm_new_password"
         label="Confirm new password"
       />
