@@ -15,7 +15,6 @@ function NewTicketPage() {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    console.log(form);
   };
 
   return (

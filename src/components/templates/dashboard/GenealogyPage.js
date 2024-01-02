@@ -1,5 +1,7 @@
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 import { getServerSession } from "next-auth";
+
+//functions
 import connectDB from "@/utils/connectDB";
 
 //styles
@@ -26,37 +28,17 @@ async function GenealogyPage() {
         <div className={styles.box}>
           <p>{getNameFromEmail(session.user.email)}</p>
           <Row title="All Sub-members" value={0} />
+          <Row title="Line" value="R" />
 
-          <div className={styles.row}>
-            <span>Line:</span>
-            <span>R</span>
-          </div>
-          <div className={styles.row}>
-            <span>Line:</span>
-            <span>R</span>
-          </div>
           <span className={styles.line}></span>
-          <div className={styles.row}>
-            <span>NFT:</span>
-            <span>R</span>
-          </div>
-          <div className={styles.row}>
-            <span>Direct Sell:</span>
-            <span>0</span>
-          </div>
-          <div className={styles.row}>
-            <span>Personal Point:</span>
-            <span>0</span>
-          </div>
-          <div className={styles.row}>
-            <span>Group Point:</span>
-            <span>0</span>
-          </div>
+
+          <Row title="NFT" value={0} />
+          <Row title="Direct Sell" value={0} />
+          <Row title="Personal Point" value={0} />
+          <Row title="Group Point" value={0} />
+
           <span className={styles.line}></span>
-          <div className={styles.row}>
-            <span>save:</span>
-            <span>0</span>
-          </div>
+          <Row title="Save" value={0} />
         </div>
       ) : (
         <p>SomeThing went wrong...</p>
