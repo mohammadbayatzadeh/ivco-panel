@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 
 //styles
-import styles from "./AdvantageFeature.module.css";
+import styles from "./features.module.css";
 
 function AdvantageFeature() {
   return (
