@@ -1,12 +1,18 @@
 import React from "react";
+
+//styles
 import styles from "./CreditCard.module.css";
+
+//elements
 import GradientBorder from "../GradientBorder";
+
+//icons
 import { BsCreditCard2FrontFill } from "react-icons/bs";
 import { TbBrandCashapp } from "react-icons/tb";
 
 function CreditCard() {
   return (
-    <GradientBorder width="100%" marginB='10px'>
+    <GradientBorder width="100%" marginB="10px">
       <div className={styles.container}>
         <div className={styles.row}>
           <p>IVCO Pay</p>
