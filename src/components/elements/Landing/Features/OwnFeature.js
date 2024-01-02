@@ -2,11 +2,11 @@ import React from "react";
 import Image from "next/image";
 
 //styles
-import styles from "./OwnFeature.module.css";
+import styles from "./features.module.css";
 
 function OwnFeature() {
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container} ${styles.wrap}`}>
       <div className={styles.content}>
         <h4>Owned by you.</h4>
         <p>
