@@ -8,6 +8,15 @@ import styles from "./GenealogyPage.module.css";
 //functions
 import { getNameFromEmail } from "@/utils/functions";
 
+const Row = ({ title, value }) => {
+  return (
+    <div className={styles.row}>
+      <span>{title}:</span>
+      <span>{value}</span>
+    </div>
+  );
+};
+
 async function GenealogyPage() {
   await connectDB();
   const session = await getServerSession(authOptions);
@@ -16,10 +25,8 @@ async function GenealogyPage() {
       {session ? (
         <div className={styles.box}>
           <p>{getNameFromEmail(session.user.email)}</p>
-          <div className={styles.row}>
-            <span>All Sub-members:</span>
-            <span>0</span>
-          </div>
+          <Row title="All Sub-members" value={0} />
+
           <div className={styles.row}>
             <span>Line:</span>
             <span>R</span>

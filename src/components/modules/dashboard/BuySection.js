@@ -6,12 +6,12 @@ import CopyToClipboard from "react-copy-to-clipboard";
 import styles from "./BuySection.module.css";
 
 //elements
+import TextInput from "@/components/elements/Textinput";
 import GradientBorder from "@/components/elements/GradientBorder";
 import Toast from "@/components/elements/Toast";
 
 //icons
 import { BiSolidCopy } from "react-icons/bi";
-import TextInput from "@/components/elements/Textinput";
 
 function BuySection() {
   const id = "adfafe7c-9a4c-42e7-bf21-259b5222cc9b";

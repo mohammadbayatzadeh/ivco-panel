@@ -1,7 +1,11 @@
 "use client";
 import React from "react";
-import styles from "./InfoSection.module.css";
 import CopyToClipboard from "react-copy-to-clipboard";
+
+//styles
+import styles from "./InfoSection.module.css";
+
+//elements
 import GradientBorder from "@/components/elements/GradientBorder";
 import Toast from "@/components/elements/Toast";
 import DashboardCard from "@/components/elements/dashboard/DashboardCard";
