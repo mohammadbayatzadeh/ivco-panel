@@ -31,7 +31,7 @@ function LandingNav() {
       <ul className={show ? `${styles.menu} ${styles.active}` : styles.menu}>
         <NavItem title="Home" href="" setShow={setShow} />
         <NavItem title="Plans" href="app" setShow={setShow} />
-        <NavItem title="FAQ" href="faq" />
+        <NavItem title="FAQ" href="faq" setShow={setShow} />
         <NavItem title="Contact Us" href="contact" setShow={setShow} />
         <NavItem title="About Us" href="about" setShow={setShow} />
         <NavItem title="Contact Us" href="contact" setShow={setShow} />
