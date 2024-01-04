@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { createContext, useEffect, useState } from "react";
 
 //styles
 import styles from "./Dashboard.module.css";
@@ -12,20 +12,14 @@ import { getNameFromEmail } from "@/utils/functions";
 import DashboardSideBar from "./DashboardSideBar";
 import { usePathname } from "next/navigation";
 
+export const sessionContext = createContext();
+
 function DashboardLayout({ children, email }) {
   const [showSidebar, setShowSidebar] = useState(false);
   const path = usePathname();
-  
   useEffect(() => {
     setShowSidebar(false);
   }, [path]);
-
-  const modifiedChildren = React.Children.map(children, (child) => {
-    if (React.isValidElement(child)) {
-      return React.cloneElement(child, { email });
-    }
-    return child;
-  });
 
   return (
     <div className={styles.container}>
@@ -41,7 +35,11 @@ function DashboardLayout({ children, email }) {
         <p>Hi , {getNameFromEmail(email)} </p>
       </nav>
       <DashboardSideBar show={showSidebar} />
-      <div className={styles.body}>{modifiedChildren}</div>
+      <div className={styles.body}>
+        <sessionContext.Provider value={email}>
+          {children}
+        </sessionContext.Provider>
+      </div>
     </div>
   );
 }
