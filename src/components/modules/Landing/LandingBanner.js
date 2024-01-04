@@ -25,7 +25,8 @@ function LandingBanner() {
           )}
           {status === "authenticated" && (
             <Link href="/dashboard">
-              Welcome Back {getNameFromEmail(data?.user?.email)}
+              <p>Welcome Back {getNameFromEmail(data?.user?.email)}</p>
+              <span>Go to dashboard</span>
             </Link>
           )}
           {status === "unauthenticated" && (

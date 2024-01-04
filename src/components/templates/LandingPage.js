@@ -33,21 +33,19 @@ function LandingPage() {
 
   return (
     <div className={styles.body}>
-      <scroll>
-        <FloatButton show={float} />
-        <div className={styles.container}>
-          <LandingNav />
-          <LandingBanner />
-          <Pelans />
-          <Features />
-          <FAQs />
-          <ContactUs />
-          <AboutUs />
-          <Supporters />
-          <Privacy />
-          <Footer />
-        </div>
-      </scroll>
+      <FloatButton show={float} />
+      <div className={styles.container}>
+        <LandingNav />
+        <LandingBanner />
+        <Pelans />
+        <Features />
+        <FAQs />
+        <ContactUs />
+        <AboutUs />
+        <Supporters />
+        <Privacy />
+        <Footer />
+      </div>
     </div>
   );
 }

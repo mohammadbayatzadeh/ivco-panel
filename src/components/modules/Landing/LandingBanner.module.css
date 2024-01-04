@@ -36,6 +36,9 @@
   z-index: 2;
   transition: all 0.5s ease;
 }
+.intro a span {
+  font-size: 0.8em;
+}
 .intro a:first-child {
   background-color: var(--primary-green-100);
   color: #000;
