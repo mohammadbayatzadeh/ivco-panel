@@ -15,9 +15,17 @@ import { usePathname } from "next/navigation";
 function DashboardLayout({ children, email }) {
   const [showSidebar, setShowSidebar] = useState(false);
   const path = usePathname();
+  
   useEffect(() => {
     setShowSidebar(false);
   }, [path]);
+
+  const modifiedChildren = React.Children.map(children, (child) => {
+    if (React.isValidElement(child)) {
+      return React.cloneElement(child, { email });
+    }
+    return child;
+  });
 
   return (
     <div className={styles.container}>
@@ -33,7 +41,7 @@ function DashboardLayout({ children, email }) {
         <p>Hi , {getNameFromEmail(email)} </p>
       </nav>
       <DashboardSideBar show={showSidebar} />
-      <div className={styles.body}>{children}</div>
+      <div className={styles.body}>{modifiedChildren}</div>
     </div>
   );
 }
