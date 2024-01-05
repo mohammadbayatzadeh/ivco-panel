@@ -5,6 +5,7 @@ import styles from "./Mainpage.module.css";
 import BuySection from "@/components/modules/dashboard/BuySection";
 import InfoSection from "@/components/modules/dashboard/InfoSection";
 import LineChart from "@/components/elements/charts/LineChart";
+import GradientBorder from "@/components/elements/GradientBorder";
 
 function MainPage() {
   return (
@@ -14,9 +15,11 @@ function MainPage() {
         <BuySection />
       </div>
 
-      <div className={styles.chart}>
-        <LineChart />
-      </div>
+      <GradientBorder marginB={20}>
+        <div className={styles.chart}>
+          <LineChart />
+        </div>
+      </GradientBorder>
     </div>
   );
 }

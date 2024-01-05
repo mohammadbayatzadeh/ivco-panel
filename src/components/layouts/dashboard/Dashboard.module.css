@@ -2,7 +2,6 @@
   background-color: var(--dark-theme-body-background);
   color: var(--neutral-white-100);
   width: 100%;
-  /* height: 100vh; */
 }
 .navbar {
   width: 100%;
