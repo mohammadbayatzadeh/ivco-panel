@@ -7,7 +7,6 @@ import am5themes_Animated from "@amcharts/amcharts5/themes/Animated";
 function LineChart() {
   useLayoutEffect(() => {
     let root = am5.Root.new("chartdiv");
-
     // Set themes
     // https://www.amcharts.com/docs/v5/concepts/themes/
     root.setThemes([am5themes_Animated.new(root)]);
@@ -89,9 +88,6 @@ function LineChart() {
         }),
       })
     );
-
-    //series1.strokes.template.set("strokeWidth", 2);
-    //series2.strokes.template.set("strokeWidth", 2);
 
     // Add scrollbar
     // https://www.amcharts.com/docs/v5/charts/xy-chart/scrollbars/
@@ -668,7 +664,6 @@ function LineChart() {
           rangeDataItem.set("value", startTime);
           range.fills.template.setAll({
             fill: series2.get("fill"),
-
             fillOpacity: 0.6,
             visible: true,
           });
@@ -723,6 +718,13 @@ function LineChart() {
           (pointA1.y - pointA2.y) * (pointB1.x - pointB2.x));
       return { x: x, y: y };
     }
+    root.interfaceColors.set("grid", am5.color(0xffffff));
+    xAxis.get("renderer").labels.template.setAll({
+      fill: root.interfaceColors.get("alternativeText"),
+    });
+    yAxis.get("renderer").labels.template.setAll({
+      fill: root.interfaceColors.get("alternativeText"),
+    });
     root.current = root;
     return () => root.dispose();
   }, []);
