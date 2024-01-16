@@ -1,0 +1,13 @@
+.squere {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  display: block;
+  border: 1px solid white;
+}
+.body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  background-color: var(--dark-theme-body-background);
+}

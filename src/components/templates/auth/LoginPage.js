@@ -14,6 +14,7 @@ import { BiHomeSmile } from "react-icons/bi";
 import BeatLoader from "react-spinners/BeatLoader";
 import TextInput from "@/components/elements/Textinput";
 import Toast from "../../elements/Toast";
+import Background from "@/components/layouts/auth/Background";
 
 function LoginPage() {
   const [form, setForm] = useState({ email: "", password: "" });
@@ -37,38 +38,40 @@ function LoginPage() {
     }
   };
   return (
-    <div className={styles.body}>
+    <Background>
       <Link href="/" className={styles.home}>
         <BiHomeSmile />
       </Link>
-      <form className={styles.form} onSubmit={submitHandler}>
-        <h3>Login Form</h3>
-        <p>Please sign-in to your account</p>
-        <TextInput form={form} setForm={setForm} name="email" label="Email" />
-        <TextInput
-          form={form}
-          setForm={setForm}
-          name="password"
-          label="Password"
-        />
+      <div className={styles.container}>
+        <form className={styles.form} onSubmit={submitHandler}>
+          <h3>Login Form</h3>
+          <p>Please sign-in to your account</p>
+          <TextInput form={form} setForm={setForm} name="email" label="Email" />
+          <TextInput
+            form={form}
+            setForm={setForm}
+            name="password"
+            label="Password"
+          />
 
-        <button type="submit">
-          {loading ? (
-            <BeatLoader
-              color="white"
-              loading={loading}
-              size={30}
-              aria-label="Loading Spinner"
-              data-testid="loader"
-            />
-          ) : (
-            "Login"
-          )}
-        </button>
-      </form>
-      <p>not have account?</p>
-      <Link href="/signup">Register</Link>
-    </div>
+          <button type="submit">
+            {loading ? (
+              <BeatLoader
+                color="white"
+                loading={loading}
+                size={30}
+                aria-label="Loading Spinner"
+                data-testid="loader"
+              />
+            ) : (
+              "Login"
+            )}
+          </button>
+        </form>
+        <p>not have account?</p>
+        <Link href="/signup">Register</Link>
+      </div>
+    </Background>
   );
 }
 
