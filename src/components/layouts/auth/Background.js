@@ -1,17 +1,18 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useLayoutEffect, useState } from "react";
+
 //styles
 import styles from "./Background.module.css";
+
+//elements
 import Squere from "@/components/elements/auth/Squere";
 
 function Background({ children }) {
   const [size, setSize] = useState(0);
-  const [rows, setRows] = useState(5);
-  useEffect(() => {
-    // console.log(window.innerHeight, size);
+  const [rows, setRows] = useState(0);
+  useLayoutEffect(() => {
     const r = size !== 0 && window.innerHeight / size;
     setRows(r + 1);
-    // console.log(rows);
   }, [size]);
   return (
     <div className={styles.body}>

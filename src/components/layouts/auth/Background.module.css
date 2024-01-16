@@ -1,9 +1,11 @@
 .body {
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
+  flex-wrap: wrap;
   background-color: var(--dark-theme-body-background);
   overflow: hidden;
   justify-content: flex-start;
   align-items: flex-start;
+  gap: 0;
 }
