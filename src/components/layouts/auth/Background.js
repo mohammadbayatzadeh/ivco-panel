@@ -10,10 +10,12 @@ import Squere from "@/components/elements/auth/Squere";
 function Background({ children }) {
   const [size, setSize] = useState(0);
   const [rows, setRows] = useState(0);
+
   useLayoutEffect(() => {
     const r = size !== 0 && window.innerHeight / size;
     setRows(r + 1);
   }, [size]);
+
   return (
     <div className={styles.body}>
       {Array.from({ length: rows * 20 }, (_, i) => (
