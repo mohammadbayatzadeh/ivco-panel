@@ -50,8 +50,8 @@ body {
 }
 button,
 input,
-select ,
-textarea{
+select,
+textarea {
   font-family: inherit;
 }
 a {

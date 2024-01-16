@@ -1,8 +1,13 @@
-import React from "react";
+import React, { memo, useEffect, useRef } from "react";
 import styles from "./Squere.module.css";
 
-function Squere() {
-  return <div className={styles.squere}></div>;
+function Squere({ size, setSize }) {
+  const ref = useRef();
+  useEffect(() => {
+    console.log(ref.current.clientWidth);
+    setSize(ref.current.clientWidth);
+  }, []);
+  return <div className={styles.squere} ref={ref}></div>;
 }
 
-export default Squere;
+export default memo(Squere);

@@ -5,7 +5,7 @@
   height: calc(100vw / 20);
 }
 .squere:hover {
-  animation: animate 1s linear alternate-reverse ;
+  animation: animate 1s linear alternate-reverse;
 }
 @keyframes animate {
   0% {
