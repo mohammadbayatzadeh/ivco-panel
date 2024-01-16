@@ -2,22 +2,17 @@
 import React, { useEffect, useState } from "react";
 //styles
 import styles from "./Background.module.css";
+import Squere from "@/components/elements/auth/Squere";
 
 function Background({ children }) {
-  const [size, setSize] = useState(0);
-  useEffect(() => {
-    const w = window.innerWidth;
-    const h = window.innerHeight;
     
-    console.log(w, h);
-  }, []);
+  useEffect(() => {}, []);
   return (
     <div className={styles.body}>
-      <div className={styles.squere}></div>
-      <div className={styles.squere}></div>
-      <div className={styles.squere}></div>
-      <div className={styles.squere}></div>
-      <div className={styles.squere}></div>
+      <Squere /> <Squere /> <Squere /> <Squere /> <Squere /> <Squere />
+      <Squere /> <Squere /> <Squere /> <Squere /> <Squere /> <Squere />
+      <Squere /> <Squere /> <Squere /> <Squere /> <Squere /> <Squere />
+      <Squere /> <Squere />
       {children}
     </div>
   );
