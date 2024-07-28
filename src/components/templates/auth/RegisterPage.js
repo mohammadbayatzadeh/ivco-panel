@@ -14,6 +14,7 @@ import Toast from "../../elements/Toast";
 
 //icons
 import { BiHomeSmile } from "react-icons/bi";
+import Background from "@/components/layouts/auth/Background";
 
 function RegisterPage() {
   const [form, setForm] = useState({ email: "", password: "" });
@@ -36,37 +37,39 @@ function RegisterPage() {
   };
 
   return (
-    <div className={styles.body}>
+    <Background>
       <Link href="/" className={styles.home}>
         <BiHomeSmile />
       </Link>
-      <form className={styles.form} onSubmit={submitHandler}>
-        <h3>Register Form</h3>
-        <p>Make your app management easy and fun!</p>
-        <TextInput form={form} setForm={setForm} name="email" label="Email" />
-        <TextInput
-          form={form}
-          setForm={setForm}
-          name="password"
-          label="Password"
-        />
-        <button type="submit">
-          {loading ? (
-            <BeatLoader
-              color="white"
-              loading={loading}
-              size={30}
-              aria-label="Loading Spinner"
-              data-testid="loader"
-            />
-          ) : (
-            "Register"
-          )}
-        </button>
-      </form>
-      <p> have account?</p>
-      <Link href="/login">Login</Link>
-    </div>
+      <div className={styles.container}>
+        <form className={styles.form} onSubmit={submitHandler}>
+          <h3>Register Form</h3>
+          <p>Make your app management easy and fun!</p>
+          <TextInput form={form} setForm={setForm} name="email" label="Email" />
+          <TextInput
+            form={form}
+            setForm={setForm}
+            name="password"
+            label="Password"
+          />
+          <button type="submit">
+            {loading ? (
+              <BeatLoader
+                color="white"
+                loading={loading}
+                size={30}
+                aria-label="Loading Spinner"
+                data-testid="loader"
+              />
+            ) : (
+              "Register"
+            )}
+          </button>
+        </form>
+        <p> have account?</p>
+        <Link href="/login">Login</Link>
+      </div>
+    </Background>
   );
 }
 
