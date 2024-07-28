@@ -18,7 +18,7 @@ function Background({ children }) {
 
   return (
     <div className={styles.body}>
-      {Array.from({ length: rows * 20 }, (_, i) => (
+      {Array.from({ length: rows * 70 }, (_, i) => (
         <Squere key={i} size={size} setSize={setSize} />
       ))}
       {children}

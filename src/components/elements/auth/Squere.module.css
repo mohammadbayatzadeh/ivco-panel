@@ -1,8 +1,8 @@
 .squere {
   box-sizing: border-box;
   border: var(--neutral-grey5-50) solid 1px;
-  width: calc(100vw / 20);
-  height: calc(100vw / 20);
+  width: calc(100vw / 70);
+  height: calc(100vw / 70);
 }
 .squere.animation {
   animation: animate 2s linear alternate-reverse;
