@@ -5,7 +5,7 @@
   height: calc(100vw / 20);
 }
 .squere.animation {
-  animation: animate 2s linear;
+  animation: animate 2s linear alternate-reverse;
 }
 @keyframes animate {
   0% {

@@ -1,7 +1,9 @@
-.container {
+.form {
   color: #fff;
   position: absolute;
   transform: translate(-50%, -50%);
+  width: 500px;
+
   top: 50%;
   left: 50%;
   display: flex;
@@ -9,14 +11,11 @@
   align-items: center;
   justify-content: center;
 }
-.container a {
+.form a {
   color: var(--gradient-green-color1);
   font-size: 1.5em;
 }
-.form {
-  padding: 15px;
-  width: 500px;
-}
+
 .form h3 {
   font-size: 2em;
   color: var(--gradient-green-color1);

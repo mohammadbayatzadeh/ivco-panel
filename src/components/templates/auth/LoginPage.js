@@ -42,35 +42,33 @@ function LoginPage() {
       <Link href="/" className={styles.home}>
         <BiHomeSmile />
       </Link>
-      <div className={styles.container}>
-        <form className={styles.form} onSubmit={submitHandler}>
-          <h3>Login Form</h3>
-          <p>Please sign-in to your account</p>
-          <TextInput form={form} setForm={setForm} name="email" label="Email" />
-          <TextInput
-            form={form}
-            setForm={setForm}
-            name="password"
-            label="Password"
-          />
+      <form className={styles.form} onSubmit={submitHandler}>
+        <h3>Login Form</h3>
+        <p>Please sign-in to your account</p>
+        <TextInput form={form} setForm={setForm} name="email" label="Email" />
+        <TextInput
+          form={form}
+          setForm={setForm}
+          name="password"
+          label="Password"
+        />
 
-          <button type="submit">
-            {loading ? (
-              <BeatLoader
-                color="white"
-                loading={loading}
-                size={30}
-                aria-label="Loading Spinner"
-                data-testid="loader"
-              />
-            ) : (
-              "Login"
-            )}
-          </button>
-        </form>
+        <button type="submit">
+          {loading ? (
+            <BeatLoader
+              color="white"
+              loading={loading}
+              size={30}
+              aria-label="Loading Spinner"
+              data-testid="loader"
+            />
+          ) : (
+            "Login"
+          )}
+        </button>
         <p>not have account?</p>
         <Link href="/signup">Register</Link>
-      </div>
+      </form>
     </Background>
   );
 }
