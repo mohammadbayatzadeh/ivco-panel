@@ -1,16 +1,15 @@
 "use client";
 import { useRef, useState } from "react";
-import CopyToClipboard from "react-copy-to-clipboard";
 
 //styles
 import styles from "./BuySection.module.css";
 
 //elements
-import TextInput from "@/components/elements/Textinput";
 import GradientBorder from "@/components/elements/GradientBorder";
-import Toast from "@/components/elements/Toast";
+import TextInput from "@/components/elements/Textinput";
 
 //icons
+import Toast from "@/components/elements/Toast";
 import { BiSolidCopy } from "react-icons/bi";
 
 function BuySection() {
@@ -21,6 +20,11 @@ function BuySection() {
   });
   const [value, setValue] = useState("Direct");
   const contentEl = useRef();
+
+  const clickHandler = () => {
+    navigator.clipboard.writeText(id);
+    Toast("id copied", "success");
+  };
 
   return (
     <GradientBorder>
@@ -77,12 +81,10 @@ function BuySection() {
           />
         </div>
 
-        <CopyToClipboard text={id} onCopy={() => Toast("id copied", "info")}>
-          <div className={styles.id}>
-            <BiSolidCopy />
-            {id}
-          </div>
-        </CopyToClipboard>
+        <div className={styles.id} onClick={clickHandler}>
+          <BiSolidCopy />
+          {id}
+        </div>
         <div className={styles.warning}>You just need to transfer Tether</div>
         <button>Buy</button>
       </div>

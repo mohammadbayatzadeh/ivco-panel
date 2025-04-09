@@ -39,12 +39,12 @@ export async function POST(req) {
     }
 
     const hash = hashPassword(password);
-
     const result = await User.create({
       email,
       password: hash,
       prevPasswords: [hash],
     });
+
     return NextResponse.json(
       { message: "user registered", data: result },
       { status: 201 }

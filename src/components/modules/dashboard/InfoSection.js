@@ -1,15 +1,12 @@
 "use client";
-import React from "react";
-import CopyToClipboard from "react-copy-to-clipboard";
 
 //styles
 import styles from "./InfoSection.module.css";
 
 //elements
 import GradientBorder from "@/components/elements/GradientBorder";
-import Toast from "@/components/elements/Toast";
-import DashboardCard from "@/components/elements/dashboard/DashboardCard";
 import CreditCard from "@/components/elements/dashboard/CreditCard";
+import DashboardCard from "@/components/elements/dashboard/DashboardCard";
 
 function InfoSection() {
   return (
@@ -17,20 +14,10 @@ function InfoSection() {
       <p>Your referral code to create a network</p>
       <div className={styles.row}>
         <GradientBorder width="49%">
-          <CopyToClipboard
-            text="L1966@4606"
-            onCopy={() => Toast("code copied", "info")}
-          >
-            <p className={styles.idButton}>L1966@4606</p>
-          </CopyToClipboard>
+          <p className={styles.idButton}>L1966@4606</p>
         </GradientBorder>
         <GradientBorder width="49%">
-          <CopyToClipboard
-            text="L1966@4606"
-            onCopy={() => Toast("code copied", "info")}
-          >
-            <p className={styles.idButton}>L1966@4606</p>
-          </CopyToClipboard>
+          <p className={styles.idButton}>L1966@4606</p>
         </GradientBorder>
       </div>
       <div className={styles.row}>
