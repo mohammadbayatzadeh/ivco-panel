@@ -1,7 +1,7 @@
 "use client";
 
 //context
-import { sessionContext } from "@/components/layouts/dashboard/DashboardLayout";
+import { SessionContext } from "@/components/layouts/dashboard/DashboardLayout";
 
 //styles
 import styles from "./GenealogyPage.module.css";
@@ -20,7 +20,7 @@ const Row = ({ title, value }) => {
 };
 
 function GenealogyPage() {
-  const email = use(sessionContext);
+  const email = use(SessionContext);
   return (
     <div className={styles.container}>
       <div className={styles.box}>

@@ -12,7 +12,7 @@ import { getNameFromEmail } from "@/utils/functions";
 import { usePathname } from "next/navigation";
 import DashboardSideBar from "./DashboardSideBar";
 
-export const sessionContext = createContext();
+export const SessionContext = createContext();
 
 function DashboardLayout({ children, email }) {
   const [showSidebar, setShowSidebar] = useState(false);
@@ -36,7 +36,7 @@ function DashboardLayout({ children, email }) {
       </nav>
       <DashboardSideBar show={showSidebar} />
       <div className={styles.body}>
-        <sessionContext value={email}>{children}</sessionContext>
+        <SessionContext value={email}>{children}</SessionContext>
       </div>
     </div>
   );

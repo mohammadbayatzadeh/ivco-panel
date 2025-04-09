@@ -1,20 +1,16 @@
-//styles
-import Link from "next/link";
-import styles from "./FloatButton.module.css";
-
-//icons
 import { FaAutoprefixer } from "react-icons/fa";
+import styles from "./FloatButton.module.css";
 
 function FloatButton({ show }) {
   return (
-    <Link
+    <a
       className={
         show ? `${styles.container} ${styles.active}` : styles.container
       }
       to="/#"
     >
       <FaAutoprefixer />
-    </Link>
+    </a>
   );
 }
 
