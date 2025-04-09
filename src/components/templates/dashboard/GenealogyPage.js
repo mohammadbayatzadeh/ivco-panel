@@ -1,5 +1,4 @@
 "use client";
-import { useContext } from "react";
 
 //context
 import { sessionContext } from "@/components/layouts/dashboard/DashboardLayout";
@@ -9,6 +8,7 @@ import styles from "./GenealogyPage.module.css";
 
 //functions
 import { getNameFromEmail } from "@/utils/functions";
+import { use } from "react";
 
 const Row = ({ title, value }) => {
   return (
@@ -20,7 +20,7 @@ const Row = ({ title, value }) => {
 };
 
 function GenealogyPage() {
-  const email = useContext(sessionContext);
+  const email = use(sessionContext);
   return (
     <div className={styles.container}>
       <div className={styles.box}>

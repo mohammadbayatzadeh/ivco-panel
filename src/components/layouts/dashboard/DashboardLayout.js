@@ -1,5 +1,5 @@
 "use client";
-import React, { createContext, useEffect, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 
 //styles
 import styles from "./Dashboard.module.css";
@@ -9,8 +9,8 @@ import { MdSpaceDashboard } from "react-icons/md";
 
 //fundtions
 import { getNameFromEmail } from "@/utils/functions";
-import DashboardSideBar from "./DashboardSideBar";
 import { usePathname } from "next/navigation";
+import DashboardSideBar from "./DashboardSideBar";
 
 export const sessionContext = createContext();
 
@@ -36,9 +36,7 @@ function DashboardLayout({ children, email }) {
       </nav>
       <DashboardSideBar show={showSidebar} />
       <div className={styles.body}>
-        <sessionContext.Provider value={email}>
-          {children}
-        </sessionContext.Provider>
+        <sessionContext value={email}>{children}</sessionContext>
       </div>
     </div>
   );

@@ -1,4 +1,5 @@
 //styles
+import Link from "next/link";
 import styles from "./FloatButton.module.css";
 
 //icons
@@ -6,14 +7,14 @@ import { FaAutoprefixer } from "react-icons/fa";
 
 function FloatButton({ show }) {
   return (
-    <a
+    <Link
       className={
         show ? `${styles.container} ${styles.active}` : styles.container
       }
-      href="/#"
+      to="/#"
     >
       <FaAutoprefixer />
-    </a>
+    </Link>
   );
 }
 

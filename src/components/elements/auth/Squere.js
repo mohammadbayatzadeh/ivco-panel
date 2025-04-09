@@ -1,4 +1,4 @@
-import React, { memo, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 //styles
 import styles from "./Squere.module.css";
@@ -25,4 +25,4 @@ function Squere({ setSize }) {
   );
 }
 
-export default memo(Squere);
+export default Squere;

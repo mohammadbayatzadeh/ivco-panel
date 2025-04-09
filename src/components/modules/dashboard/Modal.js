@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import CopyToClipboard from "react-copy-to-clipboard";
+import { useState } from "react";
 
 //styles
 import styles from "./Modal.module.css";
@@ -9,7 +8,6 @@ import { AiOutlineClose } from "react-icons/ai";
 import { BiSolidCopy } from "react-icons/bi";
 
 //components
-import Toast from "@/components/elements/Toast";
 import TextInput from "@/components/elements/Textinput";
 
 function Modal({ title, header, options = [], inputs = [], details = true }) {
@@ -59,15 +57,10 @@ function Modal({ title, header, options = [], inputs = [], details = true }) {
         ))}
         {details ? (
           <>
-            <CopyToClipboard
-              text={id}
-              onCopy={() => Toast("id copied", "info")}
-            >
-              <div className={styles.id}>
-                <BiSolidCopy />
-                {id}
-              </div>
-            </CopyToClipboard>
+            <div className={styles.id}>
+              <BiSolidCopy />
+              {id}
+            </div>
             <div className={styles.warning}>
               You just need to transfer Tether
             </div>

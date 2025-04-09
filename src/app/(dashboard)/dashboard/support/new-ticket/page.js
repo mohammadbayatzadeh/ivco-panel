@@ -1,4 +1,3 @@
-//template
 import NewTicketPage from "@/components/templates/dashboard/NewTicketPage";
 
 export const metadata = {
