@@ -1,5 +1,4 @@
 "use client";
-import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -7,10 +6,9 @@ import Link from "next/link";
 import styles from "./LandingBanner.module.css";
 
 //components
-import CoinIcon from "../../elements/Landing/items/CoinIcon";
-import { useSession } from "next-auth/react";
-import { headers } from "../../../../next.config";
 import { getNameFromEmail } from "@/utils/functions";
+import { useSession } from "next-auth/react";
+import CoinIcon from "../../elements/Landing/items/CoinIcon";
 
 function LandingBanner() {
   const { status, data } = useSession();
